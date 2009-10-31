@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="SisComWpf.View.Menu.MenuButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="55" Width="70">
+    <Button x:Name="btnMenu" Click="btnMenu_Click" Style="{DynamicResource styleMnuButton}">
+        <Button.Content>
+            <StackPanel>
+                <Image x:Name="imgButton" Stretch="Fill" Width="38.25" Height="30.6" />
+                <TextBlock x:Name="lblButton" Background="{x:Null}" Text="Button description" TextWrapping="Wrap" FontSize="7" Height="auto" TextAlignment="Center" />
+            </StackPanel>
+        </Button.Content>
+    </Button>
+</UserControl>

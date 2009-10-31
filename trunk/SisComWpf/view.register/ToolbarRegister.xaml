@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="SisComWpf.View.Register.ToolbarRegister"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:SisComWpf.View.Register"
+    Height="Auto" Width="Auto">
+
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+    
+    <DockPanel x:Name="dockPanel">
+        <ToolBar Height="30" Name="toolBarPanel1" Width="Auto" DockPanel.Dock="Top" Margin="5" >
+            <Button x:Name="btnNew" Click="btnNew_Click">
+                <Button.Content>
+                    <TextBlock Text="Novo" />
+                </Button.Content>
+            </Button>
+            <Button x:Name="btnSave" Click="btnSave_Click">
+                <Button.Content>
+                    <TextBlock  Text="Salvar" />
+                </Button.Content>
+            </Button>
+            <Button x:Name="btnDel" Click="btnDel_Click">
+                <Button.Content>
+                    <TextBlock Text="Apagar" />
+                </Button.Content>
+            </Button>
+
+        </ToolBar>
+
+    </DockPanel>
+
+</UserControl>
