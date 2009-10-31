@@ -1,0 +1,17 @@
+﻿<Window x:Class="SisComWpf.View.Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:SisComWpf.View.Menu"
+    Title="Sistema" Height="400" Width="700" xmlns:my="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration" Background="{x:Null}" ResizeMode="CanResizeWithGrip">
+    <DockPanel Name="dockPanel1">
+    	<DockPanel.Background>
+    		<LinearGradientBrush EndPoint="0.93,1.052" StartPoint="0.579,0.335">
+    			<GradientStop Color="#FFFFFFFF" Offset="0"/>
+    			<GradientStop Color="#FFACE9FC" Offset="1"/>
+    		</LinearGradientBrush>
+    	</DockPanel.Background>
+        <local:Menu x:Name="menu" DockPanel.Dock="Top" />
+        <StatusBar DockPanel.Dock="Bottom" Height="15" Background="#FF6B6B6B"></StatusBar>
+        <Frame DockPanel.Dock="Bottom" x:Name="Frame"></Frame>
+    </DockPanel>
+</Window>
