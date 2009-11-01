@@ -81,6 +81,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="view.common\TitleBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view.common\WarningMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view.menu\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,8 +151,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="view.default\CommonView.cs" />
-    <Compile Include="view.default\IDefaultView.cs" />
+    <Compile Include="view.common\CommonView.cs" />
+    <Compile Include="view.common\IDefaultView.cs" />
+    <Compile Include="view.common\TitleBar.xaml.cs">
+      <DependentUpon>TitleBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view.common\WarningMessage.xaml.cs">
+      <DependentUpon>WarningMessage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view.menu\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -165,7 +179,7 @@
     <Compile Include="view.search\SearchScreen.xaml.cs">
       <DependentUpon>SearchScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="view.default\ViewFactory.cs" />
+    <Compile Include="view.common\ViewFactory.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

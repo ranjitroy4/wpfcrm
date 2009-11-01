@@ -20,17 +20,24 @@ namespace SisComWpf.View.Register {
         }
 
         private void btnNew_Click(object sender, RoutedEventArgs e) {
-            view.ClearFields();
+            var result = CommonView.YesNoMsgBox("Limpar os campos?");
+            if (result== MessageBoxResult.Yes) view.ClearFields();
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e) {
-            var controller = view.BusinessObject as ICtrlRegister;
-            controller.Save(view.DataObject);
+            var result = CommonView.YesNoMsgBox("Salvar registro?");
+            if (result == MessageBoxResult.Yes) {
+                var controller = view.BusinessObject as ICtrlRegister;
+                controller.Save(view.DataObject);
+            }
         }
 
         private void btnDel_Click(object sender, RoutedEventArgs e) {
-            var controller = view.BusinessObject as ICtrlRegister;
-            controller.Delete(view.DataObject);
+            var result = CommonView.YesNoMsgBox("Apagar registro?");
+            if (result == MessageBoxResult.Yes) {
+                var controller = view.BusinessObject as ICtrlRegister;
+                controller.Delete(view.DataObject);
+            }
         }
     }
 }

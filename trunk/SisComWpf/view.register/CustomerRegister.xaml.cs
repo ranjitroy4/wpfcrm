@@ -16,7 +16,12 @@ namespace SisComWpf.View.Register {
 
         public CustomerRegister() {
             InitializeComponent();
+            this.titleBar.CloseButton.Click += new RoutedEventHandler(btnClose_Click);
             this.toolbar.View = this;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e) {
+            (this.Parent as Panel).Children.Remove(this);
         }
 
         #region IViewRegister Members
@@ -29,7 +34,7 @@ namespace SisComWpf.View.Register {
         public void ClearFields() {
             this.DataObject = new cliente();
             this.Update(string.Empty);
-            CommonView.ClearFields(this.stkFields);
+            //CommonView.ClearFields(this.stkFields);
         }
 
         public IDefaultCtrl BusinessObject {
@@ -42,9 +47,5 @@ namespace SisComWpf.View.Register {
         }
 
         #endregion
-
-        private void btnClose_Click(object sender, RoutedEventArgs e) {
-            (this.Parent as Panel).Children.Remove(this);
-        }
     }
 }

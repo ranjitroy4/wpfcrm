@@ -6,7 +6,7 @@
     xmlns:search ="clr-namespace:SisComWpf.View.Search"
     Height="Auto" Width="Auto">
     <Grid Height="Auto" Width="Auto" Background="#FFFFFFFF" x:Name="grd">
-        <TabControl Height="95" Name="tabControl1" VerticalAlignment="Top" BorderBrush="#FF3E3E3E">
+        <TabControl Height="120" Name="tabControl1" VerticalAlignment="Top" BorderBrush="#FF3E3E3E">
         	<TabControl.Background>
         		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
         			<GradientStop Color="#FFFBFCFF" Offset="0.013"/>
@@ -21,15 +21,15 @@
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
                 
-                <GroupBox Header="Clientes">
+                <GroupBox Header="Clientes" Background="White" >
                     <GroupBox.Content>
                         <StackPanel Orientation="Horizontal">
-                            <local:MenuButton x:Name="btnCliente" MenuLabelText="Novo Cliente" >
+                            <local:MenuButton x:Name="btnCliente" MenuLabelText="Novo" MenuButtonImage="../view.images/people.png" >
                                 <local:MenuButton.UserControlToShow>
                                     <register:CustomerRegister />
                                 </local:MenuButton.UserControlToShow>
                             </local:MenuButton>
-                            <local:MenuButton x:Name="btnFindCustomer" MenuLabelText="Pesquisar cliente" MenuButtonImage="../view.images/people.png" >
+                            <local:MenuButton x:Name="btnFindCustomer" MenuLabelText="Pesquisar" MenuButtonImage="../view.images/people.png" >
                                 <local:MenuButton.UserControlToShow>
                                     <search:EditSearch SearchFor="Customers" />
                                 </local:MenuButton.UserControlToShow>
