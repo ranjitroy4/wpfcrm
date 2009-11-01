@@ -5,13 +5,22 @@
     xmlns:local="clr-namespace:SisComWpf.View.Register"
     xmlns:model="clr-namespace:SisComWpf.model.datamodel"
     xmlns:view="clr-namespace:SisComWpf.View"
+    xmlns:common="clr-namespace:SisComWpf.view"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignWidth="800" d:DesignHeight="600"  
      >
     <UserControl.Resources>
         <model:cliente x:Key="dataObject" />
     </UserControl.Resources>
     <Grid>
-        <Button Content="Fechar" Margin="0,5,0,0" x:Name="btnClose" Click="btnClose_Click" Height="23.75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="43.623" />
-        <StackPanel x:Name="stkFields" DataContext="{StaticResource dataObject}">
+
+        <!--Common UC components! Just copy and set its propertys!-->
+        <Rectangle RadiusY="0" RadiusX="0" Style="{StaticResource styleUcBackground}"  Margin="10,10,8,10" />
+        <common:TitleBar x:Name="titleBar" Title="Cadastro de clientes" VerticalAlignment="Top" Margin="10,10,10,0" />
+
+        <StackPanel x:Name="stkFields" DataContext="{StaticResource dataObject}" Margin="10,37.96,10,0">
             <local:ToolbarRegister x:Name="toolbar" />
             <TextBlock Text="Nome" Margin="10,0,10,0" />
             <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding cli_nome}" />

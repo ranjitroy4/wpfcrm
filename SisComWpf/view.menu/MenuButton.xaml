@@ -6,7 +6,7 @@
         <Button.Content>
             <StackPanel>
                 <Image x:Name="imgButton" Stretch="Fill" Width="38.25" Height="30.6" />
-                <TextBlock x:Name="lblButton" Background="{x:Null}" Text="Button description" TextWrapping="Wrap" FontSize="7" Height="auto" TextAlignment="Center" />
+                <TextBlock x:Name="lblButton" Background="{x:Null}" Text="Description" TextWrapping="Wrap" FontSize="9" Height="auto" TextAlignment="Center" />
             </StackPanel>
         </Button.Content>
     </Button>

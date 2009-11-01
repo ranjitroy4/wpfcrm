@@ -19,6 +19,10 @@ namespace SisComWpf.View {
             }
         }
 
+        public static MessageBoxResult YesNoMsgBox(string sMessage) {
+            return MessageBox.Show(sMessage, "Sistema", MessageBoxButton.YesNo, MessageBoxImage.Question);
+        }
+
         public static void CreateViewObject(Panel panel, IDefaultView iView) {
             // Uma nova instância é criada para cada solicitação do usuário
             var ucToShow = Activator.CreateInstance(iView.GetType()) as UserControl;

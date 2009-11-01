@@ -18,8 +18,12 @@ namespace SisComWpf.View.Search {
         ICtrlSearch controller;
 
         public SearchScreen() {
-            InitializeComponent();
-            this.Loaded += new RoutedEventHandler(SearchScreen_Loaded);
+            // Evita que seja criada uma instância deste componente em tempo de design
+            // evitando o bug do "NULL REFERENCE"
+            if (!System.ComponentModel.DesignerProperties.GetIsInDesignMode(this)) {
+                InitializeComponent();
+                this.Loaded += new RoutedEventHandler(SearchScreen_Loaded);
+            }
         }
 
         private void SearchScreen_Loaded(object sender, RoutedEventArgs e) {

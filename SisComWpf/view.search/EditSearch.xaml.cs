@@ -10,16 +10,17 @@ namespace SisComWpf.View.Search {
     public partial class EditSearch : UserControl, IViewSearch {
         public EditSearch() {
             InitializeComponent();
+            this.titleBar.CloseButton.Click +=new RoutedEventHandler(btnClose_Click);
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e) {
+            (this.Parent as Panel).Children.Remove(this);
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e) {
             var iView = ViewFactory.BuildViewByEntitie(this.ucSearch.DataObject.GetType());
             iView.DataObject = this.ucSearch.DataObject;
             CommonView.CreateViewObject((Panel)this.Parent, iView, this.ucSearch.DataObject);
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e) {
-            (this.Parent as Panel).Children.Remove(this);
         }
 
         #region IDefaultView Members
@@ -54,14 +55,9 @@ namespace SisComWpf.View.Search {
 
         #region IViewSearch Members
 
-
         public SearchType SearchFor {
-            get {
-                return ucSearch.SearchFor;
-            }
-            set {
-                this.ucSearch.SearchFor = value;
-            }
+            get { return ucSearch.SearchFor; }
+            set { this.ucSearch.SearchFor = value; }
         }
 
         #endregion
