@@ -35,6 +35,7 @@ namespace SisComWpf.Model.BllRegister {
         private void Update(cliente c) {
             var dataObject = dataModel.cliente.First(p => p.cli_id == c.cli_id);
             dataObject.cli_nome = c.cli_nome;
+            dataObject.cli_endereco = c.cli_endereco;
         }
     }
 }

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="SisComWpf.View.Register.RegisterScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="auto" Width="auto"
+    xmlns:local="clr-namespace:SisComWpf.View.Register"
+    xmlns:model="clr-namespace:SisComWpf.model.datamodel"
+    xmlns:view="clr-namespace:SisComWpf.View"
+    xmlns:common="clr-namespace:SisComWpf.view"
+    xmlns:common1="clr-namespace:SisComWpf.view.common"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:register="clr-namespace:SisComWpf.view.register"
+    mc:Ignorable="d"
+    d:DesignWidth="800" d:DesignHeight="600">
+
+    <Grid>
+
+        <Rectangle RadiusY="0" RadiusX="0" Style="{StaticResource styleUcBackground}"  Margin="10,10,8,10" />
+        <common:TitleBar x:Name="titleBar" VerticalAlignment="Top" Margin="10,10,10,0" />
+
+        <StackPanel x:Name="stkFields" Margin="10,37.96,10,50.96">
+            <local:ToolbarRegister x:Name="toolbar" />
+            <!--Here we have the custom user control for each entity-->
+        </StackPanel>
+
+        <common1:WarningMessage x:Name="warningMessage" Margin="10,0,10,10" Height="Auto" VerticalAlignment="Bottom" />
+
+    </Grid>
+</UserControl>

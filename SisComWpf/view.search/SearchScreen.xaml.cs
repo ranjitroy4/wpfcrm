@@ -5,6 +5,7 @@ using SisComWpf.Controller.Search;
 using SisComWpf.Model;
 using System.Linq;
 using System.Collections.Generic;
+using SisComWpf.view.common;
 
 namespace SisComWpf.View.Search {
     
@@ -67,26 +68,16 @@ namespace SisComWpf.View.Search {
             this.dtgSearch.ItemsSource = result;
         }
 
-        public void Update(string sMessage) {
-            lblWarning.Text = sMessage;
+        public void Update(string sMessage, WarningMsgType msgType) {
+            warningMessage.Show(sMessage, msgType);
         }
-
-        #endregion
-
-
-
-        #region IViewSearch Members
-
 
         public SearchType SearchFor {
-            get {
-                return searchType;
-            }
-            set {
-                searchType = value;
-            }
+            get { return searchType; }
+            set { searchType = value; }
         }
 
         #endregion
+
     }
 }

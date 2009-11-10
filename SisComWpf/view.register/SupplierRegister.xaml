@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="SisComWpf.view.register.SupplierRegister"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:model="clr-namespace:SisComWpf.model.datamodel"
+    Height="Auto" Width="Auto">
+
+    <UserControl.Resources>
+        <model:fornecedor x:Key="dataObject" />
+    </UserControl.Resources>
+
+    <Grid>
+        <StackPanel x:Name="stkFields" DataContext="{StaticResource dataObject}" >
+            <TextBlock Text="Nome" Margin="10,0,10,0" />
+            <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding for_nome}" />
+            <TextBlock Text="CNPJ" Margin="10,0,10,0" />
+            <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding for_cnpj}" />
+            <TextBlock Text="Endereço" Margin="10,0,10,0" />
+            <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding for_endereco}" />
+            <TextBlock Text="Telefone" Margin="10,0,10,0" />
+            <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding for_telefone}" />
+            <TextBlock Text="Contato" Margin="10,0,10,0" />
+            <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding for_contato}" />
+            <TextBlock Text="Cidade" Margin="10,0,10,0" />
+            <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding for_cidade}" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

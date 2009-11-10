@@ -97,7 +97,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="view.register\CategoryRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view.register\CustomerRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view.register\ProductRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view.register\RegisterScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view.register\SellerRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view.register\SupplierRegister.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,15 +143,34 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller.info\CtrlInfoCategory.cs" />
+    <Compile Include="controller.info\CtrlSupplierInfo.cs" />
+    <Compile Include="controller.register\CtrlRegCategory.cs" />
     <Compile Include="controller.register\CtrlRegCustomer.cs" />
     <Compile Include="controller.default\CtrlFactory.cs" />
     <Compile Include="controller.default\DefaultCtrl.cs" />
+    <Compile Include="controller.register\CtrlRegProduct.cs" />
+    <Compile Include="controller.register\CtrlRegSeller.cs" />
+    <Compile Include="controller.register\CtrlRegSupplier.cs" />
+    <Compile Include="controller.info\ICtrlInfoField.cs" />
     <Compile Include="controller.register\ICtrlRegister.cs" />
     <Compile Include="controller.default\IDefaultCtrl.cs" />
+    <Compile Include="controller.search\CtrlSeaCategory.cs" />
     <Compile Include="controller.search\CtrlSeaCustomer.cs" />
+    <Compile Include="controller.search\CtrlSeaProduct.cs" />
+    <Compile Include="controller.search\CtrlSeaSeller.cs" />
+    <Compile Include="controller.search\CtrlSeaSupplier.cs" />
     <Compile Include="controller.search\ICtrlSearch.cs" />
+    <Compile Include="model.bll.category\BllRegCategory.cs" />
+    <Compile Include="model.bll.category\BllSeaCategory.cs" />
     <Compile Include="model.bll.customer\BllRegCustomer.cs" />
     <Compile Include="model.bll.customer\BllSeaCustomer.cs" />
+    <Compile Include="model.bll.product\BllRegProduct.cs" />
+    <Compile Include="model.bll.product\BllSeaProduct.cs" />
+    <Compile Include="model.bll.seller\BllRegSeller.cs" />
+    <Compile Include="model.bll.seller\BllSeaSeller.cs" />
+    <Compile Include="model.bll.supplier\BllRegSupplier.cs" />
+    <Compile Include="model.bll.supplier\BllSeaSupplier.cs" />
     <Compile Include="model.datamodel\DataModel.cs" />
     <Compile Include="model.datamodel\ModelComercial.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -165,8 +204,26 @@
     <Compile Include="view.menu\MenuButton.xaml.cs">
       <DependentUpon>MenuButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view.register.info\CategoryInfo.cs" />
+    <Compile Include="view.register.info\SupplierInfo.cs" />
+    <Compile Include="view.register\CategoryRegister.xaml.cs">
+      <DependentUpon>CategoryRegister.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view.register\CustomerRegister.xaml.cs">
       <DependentUpon>CustomerRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view.register\IViewInfoField.cs" />
+    <Compile Include="view.register\ProductRegister.xaml.cs">
+      <DependentUpon>ProductRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view.register\RegisterScreen.xaml.cs">
+      <DependentUpon>RegisterScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view.register\SellerRegister.xaml.cs">
+      <DependentUpon>SellerRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view.register\SupplierRegister.xaml.cs">
+      <DependentUpon>SupplierRegister.xaml</DependentUpon>
     </Compile>
     <Compile Include="view.register\ToolbarRegister.xaml.cs">
       <DependentUpon>ToolbarRegister.xaml</DependentUpon>
@@ -199,6 +256,10 @@
     <Resource Include="view.images\people.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="view.images\new_product.png" />
+    <Resource Include="view.images\new_supplier.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

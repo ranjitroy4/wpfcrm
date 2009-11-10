@@ -6,7 +6,11 @@ using System.Text;
 namespace SisComWpf.View.Search {
 
     public enum SearchType {
-        Customers
+        Customers,
+        Suppliers,
+        Sellers,
+        Categorys,
+        Products
     }
 
     public interface IViewSearch: IDefaultView {

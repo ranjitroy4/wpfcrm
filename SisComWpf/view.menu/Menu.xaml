@@ -5,47 +5,148 @@
     xmlns:register ="clr-namespace:SisComWpf.View.Register"
     xmlns:search ="clr-namespace:SisComWpf.View.Search"
     Height="Auto" Width="Auto">
+    
     <Grid Height="Auto" Width="Auto" Background="#FFFFFFFF" x:Name="grd">
-        <TabControl Height="120" Name="tabControl1" VerticalAlignment="Top" BorderBrush="#FF3E3E3E">
+        <TabControl Height="Auto" Name="tabControl1" VerticalAlignment="Top" Foreground="{x:Null}" BorderBrush="#FFFFFFFF">
         	<TabControl.Background>
         		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-        			<GradientStop Color="#FFFBFCFF" Offset="0.013"/>
-        			<GradientStop Color="#FFACECFF" Offset="1"/>
+        			<GradientStop Color="#FFFBFCFF" Offset="1"/>
+        			<GradientStop Color="#FFCCCCCC" Offset="0"/>
+        			<GradientStop Color="#FF6CCCFF" Offset="0.924"/>
         		</LinearGradientBrush>
         	</TabControl.Background>
-            <TabItem Header="Relações Humanas" Name="tabItem1" Background="#FFF0F8FF">
-                
+
+            <TabItem Header="Relações Humanas" Name="tabItem1" Background="#FFF0F8FF" BorderBrush="#FF4C4C4C">
                 <TabItem.HeaderTemplate>
                     <DataTemplate>
                         <TextBlock Text="Relações Humanas" Background="AliceBlue"></TextBlock>
                     </DataTemplate>
                 </TabItem.HeaderTemplate>
+
+                <StackPanel Orientation="Horizontal">
                 
-                <GroupBox Header="Clientes" Background="White" >
+                <GroupBox Background="White" HorizontalAlignment="Left" Margin="5">
                     <GroupBox.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <local:MenuButton x:Name="btnCliente" MenuLabelText="Novo" MenuButtonImage="../view.images/people.png" >
-                                <local:MenuButton.UserControlToShow>
-                                    <register:CustomerRegister />
-                                </local:MenuButton.UserControlToShow>
-                            </local:MenuButton>
-                            <local:MenuButton x:Name="btnFindCustomer" MenuLabelText="Pesquisar" MenuButtonImage="../view.images/people.png" >
-                                <local:MenuButton.UserControlToShow>
-                                    <search:EditSearch SearchFor="Customers" />
-                                </local:MenuButton.UserControlToShow>
-                            </local:MenuButton>
+                        <StackPanel Margin="5">
+                            <StackPanel Orientation="Horizontal">
+                                <local:MenuButton x:Name="btnCliente" MenuLabelText="Novo" MenuButtonImage="../view.images/people.png" >
+                                    <local:MenuButton.UserControlToShow>
+                                        <register:RegisterScreen RegisterFor="Customers" />
+                                    </local:MenuButton.UserControlToShow>
+                                </local:MenuButton>
+                                <local:MenuButton x:Name="btnFindCustomer" MenuLabelText="Pesquisar" MenuButtonImage="../view.images/people.png" >
+                                    <local:MenuButton.UserControlToShow>
+                                        <search:EditSearch SearchFor="Customers" />
+                                    </local:MenuButton.UserControlToShow>
+                                </local:MenuButton>
+                            </StackPanel>
+                            <TextBlock Background="#FF41C5E1" Text="Clientes" Margin="0" Foreground="White" FontWeight="Normal" TextAlignment="Center" />
                         </StackPanel>
                     </GroupBox.Content>
                 </GroupBox>
-                
-              
+
+                    <GroupBox Background="White" HorizontalAlignment="Left" Margin="5">
+                        <GroupBox.Content>
+                            <StackPanel Margin="5">
+                                <StackPanel Orientation="Horizontal">
+                                    <local:MenuButton x:Name="btnSeller" MenuLabelText="Novo" MenuButtonImage="../view.images/people.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <register:RegisterScreen RegisterFor="Sellers" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                    <local:MenuButton x:Name="btnFindSeller" MenuLabelText="Pesquisar" MenuButtonImage="../view.images/people.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <search:EditSearch SearchFor="Sellers" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                </StackPanel>
+                                <TextBlock Background="#FF41C5E1" Text="Vendedores" Margin="0" Foreground="White" FontWeight="Normal" TextAlignment="Center" />
+                            </StackPanel>
+                        </GroupBox.Content>
+                    </GroupBox>
+
+                </StackPanel>
+
             </TabItem>
-            <TabItem Header="Vendas" Name="tabItem2">
-                <Grid />
+
+            <TabItem Header="Compras" Name="tabItem2">
+                <TabItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Compras" Background="AliceBlue"></TextBlock>
+                    </DataTemplate>
+                </TabItem.HeaderTemplate>
+
+                <StackPanel Orientation="Horizontal">
+                    <GroupBox Background="White" HorizontalAlignment="Left" Margin="5">
+                        <GroupBox.Content>
+                            <StackPanel Margin="5">
+                                <StackPanel Orientation="Horizontal">
+                                    <local:MenuButton x:Name="btnSupplier" MenuLabelText="Novo" MenuButtonImage="../view.images/new_supplier.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <register:RegisterScreen RegisterFor="Suppliers" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                    <local:MenuButton x:Name="btnFindSupplier" MenuLabelText="Pesquisar" MenuButtonImage="../view.images/new_supplier.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <search:EditSearch SearchFor="Suppliers" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                </StackPanel>
+                                <TextBlock Background="#FF41C5E1" Text="Fornecedores" Margin="0" Foreground="White" FontWeight="Normal" TextAlignment="Center" />
+                            </StackPanel>
+                        </GroupBox.Content>
+                    </GroupBox>
+
+                    <GroupBox Background="White" HorizontalAlignment="Left" Margin="5">
+                        <GroupBox.Content>
+                            <StackPanel Margin="5">
+                                <StackPanel Orientation="Horizontal">
+                                    <local:MenuButton x:Name="btnProduct" MenuLabelText="Novo" MenuButtonImage="../view.images/new_product.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <register:RegisterScreen RegisterFor="Products" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                    <local:MenuButton x:Name="btnFindProduct" MenuLabelText="Pesquisar" MenuButtonImage="../view.images/new_product.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <search:EditSearch SearchFor="Products" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                </StackPanel>
+                                <TextBlock Background="#FF41C5E1" Text="Produtos" Margin="0" Foreground="White" FontWeight="Normal" TextAlignment="Center" />
+                            </StackPanel>
+                        </GroupBox.Content>
+                    </GroupBox>
+
+                    <GroupBox Background="White" HorizontalAlignment="Left" Margin="5">
+                        <GroupBox.Content>
+                            <StackPanel Margin="5">
+                                <StackPanel Orientation="Horizontal">
+                                    <local:MenuButton x:Name="btnCategory" MenuLabelText="Novo" MenuButtonImage="../view.images/people.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <register:RegisterScreen RegisterFor="Categorys" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                    <local:MenuButton x:Name="btnFindCategory" MenuLabelText="Pesquisar" MenuButtonImage="../view.images/people.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <search:EditSearch SearchFor="Categorys" />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                </StackPanel>
+                                <TextBlock Background="#FF41C5E1" Text="Categorias de Produto" Margin="0" Foreground="White" FontWeight="Normal" TextAlignment="Center" />
+                            </StackPanel>
+                        </GroupBox.Content>
+                    </GroupBox>
+                </StackPanel>
             </TabItem>
-            <TabItem Header="Relatórios" Name="tabItem3">
-                <Grid />
-            </TabItem>
+            <TabItem Header="Vendas" Name="tabItem3">
+                    <TabItem.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="Vendas" Background="AliceBlue"></TextBlock>
+                        </DataTemplate>
+                    </TabItem.HeaderTemplate>
+
+                    <Grid />
+                </TabItem>
         </TabControl>
     </Grid>
 </UserControl>

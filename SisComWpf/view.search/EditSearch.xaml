@@ -9,9 +9,8 @@
     d:DesignWidth="800" d:DesignHeight="600"   
     Height="Auto" Width="Auto">
     <Grid>
-        <!--Common UC components! Just copy and set its propertys!-->
         <Rectangle RadiusY="0" RadiusX="0" Style="{StaticResource styleUcBackground}"  Margin="10,10,10,10" />
-        <common:TitleBar x:Name="titleBar" Title="Pesquisar clientes" VerticalAlignment="Top" Margin="10,10,10,0" />
+        <common:TitleBar x:Name="titleBar" VerticalAlignment="Top" Margin="10,10,10,0" />
             
         <StackPanel Margin="10,47.54,10,10">
             <view:SearchScreen x:Name="ucSearch" />
