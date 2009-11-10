@@ -5,6 +5,7 @@ using System.Text;
 using SisComWpf.Model;
 using SisComWpf.View.Search;
 using SisComWpf.Model.BllRegister;
+using SisComWpf.view.common;
 
 namespace SisComWpf.Controller.Search {
     public class CtrlSeaCustomer : DefaultCtrl, ICtrlSearch {
@@ -22,9 +23,14 @@ namespace SisComWpf.Controller.Search {
                 IQueryable found = bll.DoSearch(option, value);
                 ((IViewSearch)View).GetSearchResult(found);
             } catch (Exception ex) {
-                View.Update(ex.Message);
+                View.Update(ex.Message, WarningMsgType.Error);
             }
         }
+
+        public String ViewName {
+            get { return "Pesquisar Clientes"; }
+        }
+
 
         #endregion
     }

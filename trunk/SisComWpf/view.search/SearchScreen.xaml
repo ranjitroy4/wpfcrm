@@ -4,6 +4,7 @@
     xmlns:data="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="clr-namespace:SisComWpf.view.common"
     mc:Ignorable="d"
     d:DesignWidth="800" d:DesignHeight="600"         
     Height="Auto" Width="Auto">
@@ -17,19 +18,21 @@
         <Rectangle RadiusY="5" RadiusX="5" Fill="DarkBlue" Opacity="0.2" Margin="10,10,10,10" Stroke="#FF4F4F4F" Grid.RowSpan="2" />
 	
 		<Grid Grid.Row="0" Margin="10,10,10,8">
-            <ComboBox Name="cboSearch" Width="157" HorizontalAlignment="Left" Margin="6.5,8,0,0" Style="{StaticResource styleCboFind}" />
+            <ComboBox Name="cboSearch" Width="157" HorizontalAlignment="Left" Margin="6.5,8,0,0" Style="{StaticResource styleCboFind}" Template="{DynamicResource styleCbo}" />
             <TextBox Name="txtSearch" Margin="167.5,8,81,0" Style="{StaticResource styleTxtFind}" />
-            <Button Height="35" Name="btnSearch" Click="btnSearch_Click" Width="69" Margin="0,8,8,0" HorizontalAlignment="Right" VerticalAlignment="Top" >Pesquisar</Button>
-            <TextBlock x:Name="lblWarning" Text="" Height="Auto" VerticalAlignment="Top" Margin="6.5,33.96,8,0" Foreground="{DynamicResource styleWarningMsg}" Visibility="Collapsed" />
+            <Button Height="35" Name="btnSearch" Click="btnSearch_Click" Width="69" Margin="0,8,8,0" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{DynamicResource styleMnuButton}" >Pesquisar</Button>
         </Grid>
 		
         <data:DataGrid x:Name="dtgSearch"
-					   SelectionChanged="dtgSearch_SelectionChanged" 
+					   SelectionChanged="dtgSearch_SelectionChanged"
+					   MinHeight="150"
 					   AutoGenerateColumns="True" 
 					   IsReadOnly="True" 
-					   Margin="25,8,25,25" 
+					   Margin="25,8,25,72.96" 
 					   Grid.Row="1" 
 					   d:LayoutOverrides="GridBox" />
-        
+
+        <common:WarningMessage x:Name="warningMessage" Margin="25,0,25,23" Height="Auto" VerticalAlignment="Bottom" d:LayoutOverrides="VerticalAlignment" Grid.Row="1" />
+
     </Grid>
 </UserControl>

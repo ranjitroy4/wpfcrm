@@ -9,5 +9,7 @@ namespace SisComWpf.Controller
     public interface IDefaultCtrl
     {
         IDefaultView View { get; set; }
+
+        String ViewName { get; }
     }
 }

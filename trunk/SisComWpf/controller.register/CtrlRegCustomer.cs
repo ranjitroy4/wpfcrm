@@ -6,6 +6,7 @@ using SisComWpf.View.Register;
 using SisComWpf.Model;
 using SisComWpf.Model.BllRegister;
 using SisComWpf.model.datamodel;
+using SisComWpf.view.common;
 
 namespace SisComWpf.Controller {
 
@@ -24,9 +25,9 @@ namespace SisComWpf.Controller {
 
             try {
                 bll.Save(dataObject);
-                ((IViewRegister)View).Update("Cliente salvo com sucesso!");
+                ((IViewRegister)View).Update("Cliente salvo com sucesso!", WarningMsgType.Warning);
             } catch (Exception ex) {
-                ((IViewRegister)View).Update(ex.Message);
+                ((IViewRegister)View).Update(ex.Message, WarningMsgType.Error);
             }
         }
 
@@ -35,10 +36,14 @@ namespace SisComWpf.Controller {
 
             try {
                 bll.Delete(dataObject);
-                ((IViewRegister)View).Update("Cliente excluído com sucesso!");
+                ((IViewRegister)View).Update("Cliente excluído com sucesso!", WarningMsgType.Warning);
             } catch (Exception ex) {
-                ((IViewRegister)View).Update(ex.Message);
+                ((IViewRegister)View).Update(ex.Message, WarningMsgType.Error);
             }
+        }
+
+        public String ViewName {
+            get { return "Cadastro de clientes"; }
         }
 
         #endregion

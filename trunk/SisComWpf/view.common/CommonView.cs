@@ -25,7 +25,9 @@ namespace SisComWpf.View {
 
         public static void CreateViewObject(Panel panel, IDefaultView iView) {
             // Uma nova instância é criada para cada solicitação do usuário
-            var ucToShow = Activator.CreateInstance(iView.GetType()) as UserControl;
+            // var ucToShow = Activator.CreateInstance(iView.GetType()) as UserControl;
+            // Substituída a linha acima pela fábrica
+            var ucToShow = ViewFactory.BuildUserContol(iView);
             var controller = CtrlFactory.BuildControllerByUC(ucToShow);
             BindViewToPanel(panel, controller, iView, ucToShow);
         }

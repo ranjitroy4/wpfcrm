@@ -1,9 +1,12 @@
 ﻿<UserControl x:Class="SisComWpf.view.common.WarningMessage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Height="Auto" Width="Auto">
+    Height="Auto" Width="Auto" Visibility="Collapsed">
     <Grid>
-        <Rectangle Fill="Yellow" Stroke="White" RadiusX="5" RadiusY="5" />
-        <TextBlock Text="Warning Message! May be an exception os just a simple message to user!" />
+        <Rectangle Stroke="White" RadiusX="5" RadiusY="5" Fill="{DynamicResource brushWarningMessage}" />
+        <TextBlock Text="Warning Message! May be an exception os just a simple message to user!" 
+                   Margin="8,13,16,8" 
+                   FontWeight="Bold" 
+                   x:Name="lblMessage" />
     </Grid>
 </UserControl>
