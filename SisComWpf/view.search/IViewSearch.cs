@@ -10,7 +10,8 @@ namespace SisComWpf.View.Search {
         Suppliers,
         Sellers,
         Categorys,
-        Products
+        Products,
+        PaymentsForms
     }
 
     public interface IViewSearch: IDefaultView {

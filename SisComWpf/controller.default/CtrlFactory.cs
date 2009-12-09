@@ -46,6 +46,8 @@ namespace SisComWpf.Controller {
                 iCtrl = new CtrlRegCategory();
             else if (type.Equals(typeof(produto)))
                 iCtrl = new CtrlRegProduct();
+            else if (type.Equals(typeof(forma_pagamento)))
+                iCtrl = new CtrlRegPayment();
             else
                 throw new NotImplementedException();
 
@@ -69,6 +71,9 @@ namespace SisComWpf.Controller {
                     break;
                 case RegisterType.Products:
                     iCtrl = new CtrlRegProduct();
+                    break;
+                case RegisterType.PaymentsForms:
+                    iCtrl = new CtrlRegPayment();
                     break;
                 default:
                     throw new NotImplementedException();
@@ -94,6 +99,9 @@ namespace SisComWpf.Controller {
                     break;
                 case SearchType.Products:
                     iCtrl = new CtrlSeaProduct();
+                    break;
+                case SearchType.PaymentsForms:
+                    iCtrl = new CtrlSeaPayment();
                     break;
                 default:
                     throw new NotImplementedException();

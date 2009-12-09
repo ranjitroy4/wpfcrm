@@ -46,7 +46,6 @@ namespace SisComWpf.view.register {
 
         public void Update(string sMessage, SisComWpf.view.common.WarningMsgType msgType) {
             // Campos que devem mudar de cor caso haja um erro ou etc...
-
         }
 
         #endregion

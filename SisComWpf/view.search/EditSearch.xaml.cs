@@ -4,13 +4,16 @@ using System.Windows;
 using System.Windows.Controls;
 using SisComWpf.view.common;
 using System;
+using SisComWpf.controller.search;
 
 namespace SisComWpf.View.Search {
     /// <summary>
     /// Interaction logic for EditSearch.xaml
     /// </summary>
     public partial class EditSearch : UserControl, IViewSearch {
-        
+
+        ICtrlSearchAction controller = new CtrlEditSearch();
+
         public EditSearch() {
             if (!System.ComponentModel.DesignerProperties.GetIsInDesignMode(this)) {
                 InitializeComponent();
@@ -28,10 +31,7 @@ namespace SisComWpf.View.Search {
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e) {
-            // Implementar o controle aqui
-            var iView = ViewFactory.BuildViewByEntitie(this.ucSearch.DataObject.GetType());
-            iView.DataObject = this.ucSearch.DataObject;
-            CommonView.CreateViewObject((Panel)this.Parent, iView, this.ucSearch.DataObject);
+            controller.DoAction(this);
         }
 
         #region IDefaultView Members

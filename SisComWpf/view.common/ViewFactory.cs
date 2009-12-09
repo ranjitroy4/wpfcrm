@@ -27,6 +27,8 @@ namespace SisComWpf.View {
                 iView.UcRegister = new CategoryRegister();
             else if (type.Equals(typeof(produto)))
                 iView.UcRegister = new ProductRegister();
+            else if (type.Equals(typeof(forma_pagamento)))
+                iView.UcRegister = new PaymentFormRegister();
 
             else
                 throw new NotImplementedException();
@@ -80,7 +82,10 @@ namespace SisComWpf.View {
                     ((RegisterScreen)uc).UcRegister = new ProductRegister();
                     ((RegisterScreen)uc).RegisterFor = RegisterType.Products;
                     break;
-
+                case RegisterType.PaymentsForms:
+                    ((RegisterScreen)uc).UcRegister = new PaymentFormRegister();
+                    ((RegisterScreen)uc).RegisterFor = RegisterType.PaymentsForms;
+                    break;
                 default:
                     throw new NotImplementedException();
             }
@@ -110,6 +115,9 @@ namespace SisComWpf.View {
                     break;
                 case SearchType.Products:
                     ((EditSearch)uc).SearchFor = SearchType.Products;
+                    break;
+                case SearchType.PaymentsForms:
+                    ((EditSearch)uc).SearchFor = SearchType.PaymentsForms;
                     break;
                 default:
                     throw new NotImplementedException();

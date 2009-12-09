@@ -34,6 +34,8 @@ namespace SisComWpf.View.Menu
                 this.btnFindCategory.ControlParent = value;
                 this.btnProduct.ControlParent = value;
                 this.btnFindProduct.ControlParent = value;
+                this.btnPayment.ControlParent = value;
+                this.btnFindPayment.ControlParent = value;
             }
         }
 

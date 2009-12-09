@@ -1657,7 +1657,7 @@
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram Name="ModelComercial" ZoomLevel="74">
+      <Diagram Name="ModelComercial" ZoomLevel="97">
         <EntityTypeShape EntityType="ComercialModel.cliente" Width="1.5" PointX="0.75" PointY="18.125" Height="3.326396484374996" IsExpanded="true" />
         <EntityTypeShape EntityType="ComercialModel.compra" Width="1.5" PointX="9" PointY="5.25" Height="1.9802864583333335" IsExpanded="true" />
         <EntityTypeShape EntityType="ComercialModel.compra_item" Width="1.5" PointX="8.25" PointY="14.875" Height="2.9417936197916674" IsExpanded="true" />

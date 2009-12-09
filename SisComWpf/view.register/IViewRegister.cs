@@ -11,7 +11,8 @@ namespace SisComWpf.View.Register
         Suppliers,
         Sellers,
         Categorys,
-        Products
+        Products,
+        PaymentsForms,
     }
 
     public interface IViewRegister : IDefaultView
