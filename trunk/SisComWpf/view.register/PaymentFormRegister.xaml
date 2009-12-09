@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="SisComWpf.view.register.PaymentFormRegister"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:model="clr-namespace:SisComWpf.model.datamodel"
+    Height="Auto" Width="Auto">
+
+    <UserControl.Resources>
+        <model:forma_pagamento x:Key="dataObject" />
+    </UserControl.Resources>
+
+    <Grid>
+        <StackPanel x:Name="stkFields" DataContext="{StaticResource dataObject}" >
+            <TextBlock Text="Descrição" Margin="10,0,10,0" />
+            <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding fopa_descricao}"  />
+            <RadioButton IsChecked="{Binding fopa_flag_acrescimo}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
