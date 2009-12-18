@@ -137,6 +137,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="view.search\SearchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view.shopping\ShoppingScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -178,6 +182,8 @@
     <Compile Include="controller.search\CtrlSelectSearch.cs" />
     <Compile Include="controller.search\ICtrlSearch.cs" />
     <Compile Include="controller.search\ICtrlSearchAction.cs" />
+    <Compile Include="controller.shopping\CtrlShopping.cs" />
+    <Compile Include="controller.shopping\ICtrlShopping.cs" />
     <Compile Include="model.bll.category\BllRegCategory.cs" />
     <Compile Include="model.bll.category\BllSeaCategory.cs" />
     <Compile Include="model.bll.customer\BllRegCustomer.cs" />
@@ -188,6 +194,7 @@
     <Compile Include="model.bll.product\BllSeaProduct.cs" />
     <Compile Include="model.bll.seller\BllRegSeller.cs" />
     <Compile Include="model.bll.seller\BllSeaSeller.cs" />
+    <Compile Include="model.bll.shopping\BllShopping.cs" />
     <Compile Include="model.bll.supplier\BllRegSupplier.cs" />
     <Compile Include="model.bll.supplier\BllSeaSupplier.cs" />
     <Compile Include="model.datamodel\DataModel.cs" />
@@ -259,6 +266,9 @@
       <DependentUpon>SearchScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="view.common\ViewFactory.cs" />
+    <Compile Include="view.search\SearchWindow.xaml.cs">
+      <DependentUpon>SearchWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view.shopping\ShoppingScreen.xaml.cs">
       <DependentUpon>ShoppingScreen.xaml</DependentUpon>
     </Compile>
