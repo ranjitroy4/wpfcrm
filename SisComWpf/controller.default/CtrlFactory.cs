@@ -11,6 +11,8 @@ using SisComWpf.model.datamodel;
 using SisComWpf.view.register;
 using SisComWpf.controller.register;
 using SisComWpf.controller.search;
+using SisComWpf.view.shopping;
+using SisComWpf.controller.shopping;
 
 namespace SisComWpf.Controller {
 
@@ -28,6 +30,8 @@ namespace SisComWpf.Controller {
                 iCtrl = BuildRegisterControl((IViewRegister)userControl);
             else if (type.Equals(typeof(EditSearch)))
                 iCtrl = BuildSearchControl((IViewSearch)userControl);
+            else if (type.Equals(typeof(ShoppingScreen)))
+                iCtrl = new CtrlShopping();
             else
                 throw new NotImplementedException();
 

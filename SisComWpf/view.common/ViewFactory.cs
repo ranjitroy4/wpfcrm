@@ -4,6 +4,7 @@ using SisComWpf.model.datamodel;
 using SisComWpf.view.register;
 using System.Windows.Controls;
 using SisComWpf.View.Search;
+using SisComWpf.view.shopping;
 
 namespace SisComWpf.View {
 
@@ -48,8 +49,10 @@ namespace SisComWpf.View {
 
             if (type.Equals(typeof(RegisterScreen)))
                 uc = BuildRegisterScreen(iView);
-            else // Search Screen
-                uc = BuildSearchScreen(iView);
+            else if (type.Equals(typeof(ShoppingScreen)))
+                uc = new ShoppingScreen();
+            else
+                uc = BuildSearchScreen(iView); // Search Screen
 
             return (UserControl)uc;
         }

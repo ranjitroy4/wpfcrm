@@ -24,24 +24,31 @@
 
             <StackPanel Orientation="Horizontal">
 
-                <TextBlock Width="400" />
-                <Button Width="100" Content="Buscar" />
+                <TextBox Width="400" />
+                <Button Width="100" Content="Buscar" x:Name="btnFind" Click="btnFind_Click" />
             </StackPanel>
 
             <data:DataGrid  x:Name="dtgItems"
 					        MinHeight="150"
                             AutoGenerateColumns="False"
-                            CanUserAddRows="False"
+                            CanUserAddRows="True"
                             CanUserDeleteRows="True"
                             CanUserSortColumns="True">
 
                 <data:DataGrid.Columns>
                     <data:DataGridTemplateColumn>
+                        <!-- Em modo de edição pode ser usado um templante diferente do visualização -->
                         <data:DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <TextBox Text="Teste" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellEditingTemplate>
+                        <data:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="Teste" />
                             </DataTemplate>
-                        </data:DataGridTemplateColumn.CellEditingTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+
                     </data:DataGridTemplateColumn>
 
                     <data:DataGridTextColumn Header="Valor Unitário" />
@@ -50,6 +57,18 @@
                     <data:DataGridTextColumn Header="Valor Venda" />
                     <data:DataGridTextColumn Header="Valor Total Venda" />
                     <data:DataGridComboBoxColumn Header="Tamanho" />
+                    <data:DataGridTemplateColumn >
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                    <TextBlock Text="Tamanho:" FontWeight="Bold"/>
+                                    <ComboBox IsEditable="True" 
+                              
+                             />
+                                </StackPanel>
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
                 </data:DataGrid.Columns>
             </data:DataGrid>
 
