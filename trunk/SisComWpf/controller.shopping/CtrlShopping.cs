@@ -8,6 +8,10 @@ using SisComWpf.model.bll.shopping;
 using SisComWpf.model.datamodel;
 using SisComWpf.view.common;
 using SisComWpf.model.bll.product;
+using SisComWpf.view.search;
+using SisComWpf.View.Search;
+using System.Windows.Forms;
+using SisComWpf.view.shopping;
 
 namespace SisComWpf.controller.shopping {
     public class CtrlShopping : DefaultCtrl, ICtrlShopping {
@@ -61,8 +65,28 @@ namespace SisComWpf.controller.shopping {
         /// </summary>
         /// <param name="sCode"></param>
         public void FindProduct(string sCode) {
-            var result = bllProduct.DoSearch("", sCode);
-            
+            var result = bllProduct.DoSearch("Código", sCode).OfType<produto>().ToList<produto>();
+            if (result.Count > 0) {
+                AddProduct(result[0]);
+                ((IViewShopping)View).Update();
+            } else {
+                SearchWindow searchWindow = CommonView.BuildSearchWindow(SearchType.Products);
+                searchWindow.Closed += new EventHandler(searchWindow_Closed);
+                searchWindow.ShowDialog();
+            }
+        }
+
+        /// <summary>
+        /// Quando a janela for fechada, caso o usuário tenha escolhido um valor, adiciona o produto à lista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void searchWindow_Closed(object sender, EventArgs e) {
+            var obj = sender as SearchWindow;
+            if (obj.DataObject != null) {
+                AddProduct((produto)obj.DataObject);
+                ((IViewShopping)View).Update();
+            }
         }
 
         #endregion

@@ -1,27 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using SisComWpf.View;
-using SisComWpf.view.common;
-using SisComWpf.Controller;
-using SisComWpf.Controller.Search;
 using SisComWpf.controller.shopping;
+using SisComWpf.Controller;
+using SisComWpf.view.common;
 
 namespace SisComWpf.view.shopping {
     /// <summary>
     /// Interaction logic for ShoppingScreen.xaml
     /// </summary>
-    public partial class ShoppingScreen : UserControl, IDefaultView {
+    public partial class ShoppingScreen : UserControl, IViewShopping {
 
         private ICtrlShopping controller;
         private object dataObject;
@@ -64,8 +52,20 @@ namespace SisComWpf.view.shopping {
 
         #endregion
 
-        private void btnFind_Click(object sender, RoutedEventArgs e) {
+        #region IViewShopping Members
 
+        public void Update() {
+            dtgItems.Items.Refresh();
+        }
+
+        #endregion
+
+        private void btnFind_Click(object sender, RoutedEventArgs e) {
+            controller.FindProduct(txtInput.Text);
+        }
+
+        private void dtgItems_RowEditEnding(object sender, Microsoft.Windows.Controls.DataGridRowEditEndingEventArgs e) {
+            controller.UpdateListValues();
         }
     }
 }

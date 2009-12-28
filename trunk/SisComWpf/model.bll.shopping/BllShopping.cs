@@ -21,7 +21,8 @@ namespace SisComWpf.model.bll.shopping {
         public void UpdateValues() {
             foreach (var item in items) {
                 item.coit_valor_total = item.coit_qtde * item.coit_valor_unitario;
-                item.coit_valor_venda = (item.coit_valor_unitario * item.coit_porc_ganho) + item.coit_valor_unitario;
+                item.coit_valor_venda = (item.coit_valor_unitario * item.coit_porc_ganho / 100) + item.coit_valor_unitario;
+                item.coit_valor_total_venda = item.coit_qtde * item.coit_valor_venda;
             }
         }
 

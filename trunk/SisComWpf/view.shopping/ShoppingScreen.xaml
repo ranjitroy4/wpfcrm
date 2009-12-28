@@ -10,10 +10,15 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:register="clr-namespace:SisComWpf.view.register"
+    xmlns:info="clr-namespace:SisComWpf.view.register.info"
     mc:Ignorable="d"
     xmlns:data="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
     d:DesignWidth="800" d:DesignHeight="600">
 
+    <UserControl.Resources>
+        <info:SizeInfo x:Key="sizeList" />
+    </UserControl.Resources>
+    
     <Grid>
 
         <Rectangle RadiusY="0" RadiusX="0" Style="{StaticResource styleUcBackground}"  Margin="10,10,8,10" />
@@ -23,52 +28,77 @@
             <local:ToolbarShopping x:Name="toolbar" />
 
             <StackPanel Orientation="Horizontal">
-
-                <TextBox Width="400" />
+                <TextBox Width="400" x:Name="txtInput" />
                 <Button Width="100" Content="Buscar" x:Name="btnFind" Click="btnFind_Click" />
             </StackPanel>
 
             <data:DataGrid  x:Name="dtgItems"
 					        MinHeight="150"
                             AutoGenerateColumns="False"
-                            CanUserAddRows="True"
+                            CanUserAddRows="False"
                             CanUserDeleteRows="True"
-                            CanUserSortColumns="True">
+                            CanUserSortColumns="False"
+                            RowEditEnding="dtgItems_RowEditEnding">
 
                 <data:DataGrid.Columns>
-                    <data:DataGridTemplateColumn>
-                        <!-- Em modo de edição pode ser usado um templante diferente do visualização -->
+                    <data:DataGridTextColumn IsReadOnly="True" Header="Código" Binding="{Binding produto.prod_codigo}" />
+                    <data:DataGridTextColumn IsReadOnly="True" Header="Descrição" Binding="{Binding produto.prod_descricao}" />
+                        
+                    <data:DataGridTemplateColumn Header="Quantidade">
+                    <!-- Em modo de edição pode ser usado um templante diferente do visualização -->
                         <data:DataGridTemplateColumn.CellEditingTemplate>
                             <DataTemplate>
-                                <TextBox Text="Teste" />
+                                <TextBox Text="{Binding coit_qtde }" />
                             </DataTemplate>
                         </data:DataGridTemplateColumn.CellEditingTemplate>
                         <data:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Teste" />
+                                <TextBlock Text="{Binding coit_qtde }" />
                             </DataTemplate>
                         </data:DataGridTemplateColumn.CellTemplate>
-
                     </data:DataGridTemplateColumn>
 
-                    <data:DataGridTextColumn Header="Valor Unitário" />
-                    <data:DataGridTextColumn Header="Valor Total" />
-                    <data:DataGridTextColumn Header="Porcentagem" />
-                    <data:DataGridTextColumn Header="Valor Venda" />
-                    <data:DataGridTextColumn Header="Valor Total Venda" />
-                    <data:DataGridComboBoxColumn Header="Tamanho" />
-                    <data:DataGridTemplateColumn >
+                    <data:DataGridTemplateColumn Header="Valor Unitário">
+                        <!-- Em modo de edição pode ser usado um templante diferente do visualização -->
+                        <data:DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding coit_valor_unitario }" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellEditingTemplate>
+
+                        <data:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding coit_valor_unitario }" />
+                            </DataTemplate>
+                        </data:DataGridTemplateColumn.CellTemplate>
+                    </data:DataGridTemplateColumn>
+
+                    <data:DataGridTextColumn Header="Valor Total"       Binding="{Binding coit_valor_total}"        IsReadOnly="True" />
+                    <data:DataGridTextColumn Header="Porcentagem"       Binding="{Binding coit_porc_ganho}"                           />
+                    <data:DataGridTextColumn Header="Valor Venda"       Binding="{Binding coit_valor_venda}"        IsReadOnly="True" />
+                    <data:DataGridTextColumn Header="Valor Total Venda" Binding="{Binding coit_valor_total_venda}"  IsReadOnly="True" />
+                    
+                    <data:DataGridComboBoxColumn Header="Tamanho" 
+                                                 
+                                                 ItemsSource="{StaticResource sizeList}" 
+                                                 SelectedItemBinding="{Binding produto_tamanho.prta_descricao}"
+                                                 
+                                                 SelectedValueBinding="{Binding prta_id}"
+                                                 DisplayMemberPath="prta_descricao" />
+                    
+                    <!--<data:DataGridTemplateColumn Header="Tamanho" >
                         <data:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
                                     <TextBlock Text="Tamanho:" FontWeight="Bold"/>
                                     <ComboBox IsEditable="True" 
-                              
-                             />
+                                              ItemsSource="{StaticResource sizeList}" 
+                                              Text="{Binding produto_tamanho.prta_descricao}" />
                                 </StackPanel>
                             </DataTemplate>
                         </data:DataGridTemplateColumn.CellTemplate>
-                    </data:DataGridTemplateColumn>
+                    </data:DataGridTemplateColumn>-->
+                    
                 </data:DataGrid.Columns>
             </data:DataGrid>
 
