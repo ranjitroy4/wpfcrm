@@ -18,15 +18,26 @@ namespace SisComWpf.model.bll.product {
         public IQueryable DoSearch(string option, string value) {
             IQueryable found;
 
-            if (value.Equals(string.Empty)) {
+            // Listar todos os produtos
+            if ((value.Equals(string.Empty)) && (option.Equals("Descrição"))) {
                 found = (from p in dataModel.produto
                          select p);
 
+            // Pesquisar produto por descrição
             } else if (option.Equals("Descrição")) {
 
                 found = (from p in dataModel.produto
                          where p.prod_descricao.Contains(value)
                          select p);
+            
+            // Pesquisar produto por código do usuário (código de barras)
+            } else if (option.Equals("Código")) {
+
+                found = (from p in dataModel.produto
+                         where p.prod_codigo.Equals(value)
+                         select p);
+
+            // Pesquisar por ID (sistema)
             } else {
 
                 int iValue = Convert.ToInt32(value);
@@ -37,6 +48,5 @@ namespace SisComWpf.model.bll.product {
 
             return found;
         }
-
     }
 }

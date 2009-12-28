@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Controls;
 using SisComWpf.Controller;
 using System.Windows;
+using SisComWpf.view.search;
+using SisComWpf.View.Search;
 
 namespace SisComWpf.View {
 
@@ -46,6 +48,16 @@ namespace SisComWpf.View {
             ((IDefaultView)userControl).BusinessObject = iCtrl;
             iCtrl.View = ((IDefaultView)userControl);
             panel.Children.Add(userControl);
+        }
+
+        public static SearchWindow BuildSearchWindow(SearchType searchType) {
+            SearchWindow searchWindow = new SearchWindow();
+            searchWindow.SearchFor = searchType;
+            var iCtrl = CtrlFactory.BuildControllerByUC(searchWindow.ucSearch);
+            iCtrl.View = searchWindow;
+            searchWindow.BusinessObject = iCtrl;
+
+            return searchWindow;
         }
     }
 }

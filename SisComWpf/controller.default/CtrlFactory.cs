@@ -13,6 +13,7 @@ using SisComWpf.controller.register;
 using SisComWpf.controller.search;
 using SisComWpf.view.shopping;
 using SisComWpf.controller.shopping;
+using SisComWpf.view.search;
 
 namespace SisComWpf.Controller {
 
@@ -28,7 +29,7 @@ namespace SisComWpf.Controller {
             Type type = userControl.GetType();
             if (type.Equals(typeof(RegisterScreen)))
                 iCtrl = BuildRegisterControl((IViewRegister)userControl);
-            else if (type.Equals(typeof(EditSearch)))
+            else if (type.Equals(typeof(EditSearch)) || type.Equals(typeof(SearchScreen)))
                 iCtrl = BuildSearchControl((IViewSearch)userControl);
             else if (type.Equals(typeof(ShoppingScreen)))
                 iCtrl = new CtrlShopping();

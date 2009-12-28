@@ -160,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller.info\CtrlInfoCategory.cs" />
+    <Compile Include="controller.info\CtrlInfoSize.cs" />
     <Compile Include="controller.info\CtrlSupplierInfo.cs" />
     <Compile Include="controller.register\CtrlRegCategory.cs" />
     <Compile Include="controller.register\CtrlRegCustomer.cs" />
@@ -195,6 +196,7 @@
     <Compile Include="model.bll.seller\BllRegSeller.cs" />
     <Compile Include="model.bll.seller\BllSeaSeller.cs" />
     <Compile Include="model.bll.shopping\BllShopping.cs" />
+    <Compile Include="model.bll.size\BllSeaSize.cs" />
     <Compile Include="model.bll.supplier\BllRegSupplier.cs" />
     <Compile Include="model.bll.supplier\BllSeaSupplier.cs" />
     <Compile Include="model.datamodel\DataModel.cs" />
@@ -231,6 +233,7 @@
       <DependentUpon>MenuButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="view.register.info\CategoryInfo.cs" />
+    <Compile Include="view.register.info\SizeInfo.cs" />
     <Compile Include="view.register.info\SupplierInfo.cs" />
     <Compile Include="view.register\CategoryRegister.xaml.cs">
       <DependentUpon>CategoryRegister.xaml</DependentUpon>
@@ -269,6 +272,7 @@
     <Compile Include="view.search\SearchWindow.xaml.cs">
       <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view.shopping\IViewShopping.cs" />
     <Compile Include="view.shopping\ShoppingScreen.xaml.cs">
       <DependentUpon>ShoppingScreen.xaml</DependentUpon>
     </Compile>
