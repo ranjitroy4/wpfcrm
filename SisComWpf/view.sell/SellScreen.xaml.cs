@@ -16,9 +16,43 @@ namespace SisComWpf.view.sell {
     /// <summary>
     /// Interaction logic for SellScreen.xaml
     /// </summary>
-    public partial class SellScreen : UserControl {
+    public partial class SellScreen : UserControl, IViewSell {
         public SellScreen() {
             InitializeComponent();
         }
+
+        #region IViewSell Members
+
+        public void Update() {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region IDefaultView Members
+
+        public SisComWpf.Controller.IDefaultCtrl BusinessObject {
+            get {
+                throw new NotImplementedException();
+            }
+            set {
+                throw new NotImplementedException();
+            }
+        }
+
+        public object DataObject {
+            get {
+                throw new NotImplementedException();
+            }
+            set {
+                throw new NotImplementedException();
+            }
+        }
+
+        public void Update(string sMessage, SisComWpf.view.common.WarningMsgType msgType) {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }

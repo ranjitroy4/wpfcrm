@@ -4,122 +4,121 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ComercialModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
-        <EntityContainer Name="ComercialModelStoreContainer">
-          <EntitySet Name="cliente" EntityType="ComercialModel.Store.cliente" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="compra" EntityType="ComercialModel.Store.compra" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="compra_item" EntityType="ComercialModel.Store.compra_item" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="estoque" EntityType="ComercialModel.Store.estoque" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="estorno" EntityType="ComercialModel.Store.estorno" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="forma_pagamento" EntityType="ComercialModel.Store.forma_pagamento" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="fornecedor" EntityType="ComercialModel.Store.fornecedor" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="pagamento" EntityType="ComercialModel.Store.pagamento" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="produto" EntityType="ComercialModel.Store.produto" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="produto_categoria" EntityType="ComercialModel.Store.produto_categoria" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="produto_com_vendedor" EntityType="ComercialModel.Store.produto_com_vendedor" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="produto_com_vendedor_item" EntityType="ComercialModel.Store.produto_com_vendedor_item" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="produto_em_condicao" EntityType="ComercialModel.Store.produto_em_condicao" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="produto_em_condicao_item" EntityType="ComercialModel.Store.produto_em_condicao_item" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="produto_tamanho" EntityType="ComercialModel.Store.produto_tamanho" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="saida" EntityType="ComercialModel.Store.saida" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="saida_tipo" EntityType="ComercialModel.Store.saida_tipo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="sysdiagrams" EntityType="ComercialModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="venda" EntityType="ComercialModel.Store.venda" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="venda_item" EntityType="ComercialModel.Store.venda_item" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="vendedor" EntityType="ComercialModel.Store.vendedor" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_compra_item_compra" Association="ComercialModel.Store.FK_compra_item_compra">
+      <Schema Namespace="ComercialModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="ComercialModel1StoreContainer">
+          <EntitySet Name="cliente" EntityType="ComercialModel1.Store.cliente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="compra" EntityType="ComercialModel1.Store.compra" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="compra_item" EntityType="ComercialModel1.Store.compra_item" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="estoque" EntityType="ComercialModel1.Store.estoque" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="estorno" EntityType="ComercialModel1.Store.estorno" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="forma_pagamento" EntityType="ComercialModel1.Store.forma_pagamento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="fornecedor" EntityType="ComercialModel1.Store.fornecedor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="pagamento" EntityType="ComercialModel1.Store.pagamento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produto" EntityType="ComercialModel1.Store.produto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produto_categoria" EntityType="ComercialModel1.Store.produto_categoria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produto_com_vendedor" EntityType="ComercialModel1.Store.produto_com_vendedor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produto_com_vendedor_item" EntityType="ComercialModel1.Store.produto_com_vendedor_item" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produto_em_condicao" EntityType="ComercialModel1.Store.produto_em_condicao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produto_em_condicao_item" EntityType="ComercialModel1.Store.produto_em_condicao_item" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="produto_tamanho" EntityType="ComercialModel1.Store.produto_tamanho" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="saida" EntityType="ComercialModel1.Store.saida" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="saida_tipo" EntityType="ComercialModel1.Store.saida_tipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="venda" EntityType="ComercialModel1.Store.venda" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="venda_item" EntityType="ComercialModel1.Store.venda_item" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vendedor" EntityType="ComercialModel1.Store.vendedor" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_compra_item_compra" Association="ComercialModel1.Store.FK_compra_item_compra">
             <End Role="compra" EntitySet="compra" />
             <End Role="compra_item" EntitySet="compra_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_compra_item_produto" Association="ComercialModel.Store.FK_compra_item_produto">
+          <AssociationSet Name="FK_compra_item_produto" Association="ComercialModel1.Store.FK_compra_item_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="compra_item" EntitySet="compra_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_compra_item_produto_tamanho" Association="ComercialModel.Store.FK_compra_item_produto_tamanho">
+          <AssociationSet Name="FK_compra_item_produto_tamanho" Association="ComercialModel1.Store.FK_compra_item_produto_tamanho">
             <End Role="produto_tamanho" EntitySet="produto_tamanho" />
             <End Role="compra_item" EntitySet="compra_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_estoque_produto" Association="ComercialModel.Store.FK_estoque_produto">
+          <AssociationSet Name="FK_estoque_produto" Association="ComercialModel1.Store.FK_estoque_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="estoque" EntitySet="estoque" />
           </AssociationSet>
-          <AssociationSet Name="FK_estorno_produto" Association="ComercialModel.Store.FK_estorno_produto">
+          <AssociationSet Name="FK_estorno_produto" Association="ComercialModel1.Store.FK_estorno_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="estorno" EntitySet="estorno" />
           </AssociationSet>
-          <AssociationSet Name="FK_estorno_venda" Association="ComercialModel.Store.FK_estorno_venda">
+          <AssociationSet Name="FK_estorno_venda" Association="ComercialModel1.Store.FK_estorno_venda">
             <End Role="venda" EntitySet="venda" />
             <End Role="estorno" EntitySet="estorno" />
           </AssociationSet>
-          <AssociationSet Name="FK_pagamento_venda" Association="ComercialModel.Store.FK_pagamento_venda">
+          <AssociationSet Name="FK_pagamento_venda" Association="ComercialModel1.Store.FK_pagamento_venda">
             <End Role="venda" EntitySet="venda" />
             <End Role="pagamento" EntitySet="pagamento" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_com_vendedor_item_produto" Association="ComercialModel.Store.FK_produto_com_vendedor_item_produto">
+          <AssociationSet Name="FK_produto_com_vendedor_item_produto" Association="ComercialModel1.Store.FK_produto_com_vendedor_item_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="produto_com_vendedor_item" EntitySet="produto_com_vendedor_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_com_vendedor_item_produto_com_vendedor" Association="ComercialModel.Store.FK_produto_com_vendedor_item_produto_com_vendedor">
+          <AssociationSet Name="FK_produto_com_vendedor_item_produto_com_vendedor" Association="ComercialModel1.Store.FK_produto_com_vendedor_item_produto_com_vendedor">
             <End Role="produto_com_vendedor" EntitySet="produto_com_vendedor" />
             <End Role="produto_com_vendedor_item" EntitySet="produto_com_vendedor_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_com_vendedor_vendedor" Association="ComercialModel.Store.FK_produto_com_vendedor_vendedor">
+          <AssociationSet Name="FK_produto_com_vendedor_vendedor" Association="ComercialModel1.Store.FK_produto_com_vendedor_vendedor">
             <End Role="vendedor" EntitySet="vendedor" />
             <End Role="produto_com_vendedor" EntitySet="produto_com_vendedor" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_em_condicao_cliente" Association="ComercialModel.Store.FK_produto_em_condicao_cliente">
+          <AssociationSet Name="FK_produto_em_condicao_cliente" Association="ComercialModel1.Store.FK_produto_em_condicao_cliente">
             <End Role="cliente" EntitySet="cliente" />
             <End Role="produto_em_condicao" EntitySet="produto_em_condicao" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_em_condicao_item_produto" Association="ComercialModel.Store.FK_produto_em_condicao_item_produto">
+          <AssociationSet Name="FK_produto_em_condicao_item_produto" Association="ComercialModel1.Store.FK_produto_em_condicao_item_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="produto_em_condicao_item" EntitySet="produto_em_condicao_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_em_condicao_item_produto_em_condicao" Association="ComercialModel.Store.FK_produto_em_condicao_item_produto_em_condicao">
+          <AssociationSet Name="FK_produto_em_condicao_item_produto_em_condicao" Association="ComercialModel1.Store.FK_produto_em_condicao_item_produto_em_condicao">
             <End Role="produto_em_condicao" EntitySet="produto_em_condicao" />
             <End Role="produto_em_condicao_item" EntitySet="produto_em_condicao_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_em_condicao_vendedor" Association="ComercialModel.Store.FK_produto_em_condicao_vendedor">
+          <AssociationSet Name="FK_produto_em_condicao_vendedor" Association="ComercialModel1.Store.FK_produto_em_condicao_vendedor">
             <End Role="vendedor" EntitySet="vendedor" />
             <End Role="produto_em_condicao" EntitySet="produto_em_condicao" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_fornecedor" Association="ComercialModel.Store.FK_produto_fornecedor">
+          <AssociationSet Name="FK_produto_fornecedor" Association="ComercialModel1.Store.FK_produto_fornecedor">
             <End Role="fornecedor" EntitySet="fornecedor" />
             <End Role="produto" EntitySet="produto" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_produto_categoria" Association="ComercialModel.Store.FK_produto_produto_categoria">
+          <AssociationSet Name="FK_produto_produto_categoria" Association="ComercialModel1.Store.FK_produto_produto_categoria">
             <End Role="produto_categoria" EntitySet="produto_categoria" />
             <End Role="produto" EntitySet="produto" />
           </AssociationSet>
-          <AssociationSet Name="FK_saida_produto" Association="ComercialModel.Store.FK_saida_produto">
+          <AssociationSet Name="FK_saida_produto" Association="ComercialModel1.Store.FK_saida_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="saida" EntitySet="saida" />
           </AssociationSet>
-          <AssociationSet Name="FK_saida_saida_tipo" Association="ComercialModel.Store.FK_saida_saida_tipo">
+          <AssociationSet Name="FK_saida_saida_tipo" Association="ComercialModel1.Store.FK_saida_saida_tipo">
             <End Role="saida_tipo" EntitySet="saida_tipo" />
             <End Role="saida" EntitySet="saida" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_cliente" Association="ComercialModel.Store.FK_venda_cliente">
+          <AssociationSet Name="FK_venda_cliente" Association="ComercialModel1.Store.FK_venda_cliente">
             <End Role="cliente" EntitySet="cliente" />
             <End Role="venda" EntitySet="venda" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_forma_pagamento" Association="ComercialModel.Store.FK_venda_forma_pagamento">
+          <AssociationSet Name="FK_venda_forma_pagamento" Association="ComercialModel1.Store.FK_venda_forma_pagamento">
             <End Role="forma_pagamento" EntitySet="forma_pagamento" />
             <End Role="venda" EntitySet="venda" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_item_compra" Association="ComercialModel.Store.FK_venda_item_compra">
+          <AssociationSet Name="FK_venda_item_compra" Association="ComercialModel1.Store.FK_venda_item_compra">
             <End Role="compra" EntitySet="compra" />
             <End Role="venda_item" EntitySet="venda_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_item_produto1" Association="ComercialModel.Store.FK_venda_item_produto1">
+          <AssociationSet Name="FK_venda_item_produto1" Association="ComercialModel1.Store.FK_venda_item_produto1">
             <End Role="produto" EntitySet="produto" />
             <End Role="venda_item" EntitySet="venda_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_item_venda" Association="ComercialModel.Store.FK_venda_item_venda">
+          <AssociationSet Name="FK_venda_item_venda" Association="ComercialModel1.Store.FK_venda_item_venda">
             <End Role="venda" EntitySet="venda" />
             <End Role="venda_item" EntitySet="venda_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_vendedor" Association="ComercialModel.Store.FK_venda_vendedor">
+          <AssociationSet Name="FK_venda_vendedor" Association="ComercialModel1.Store.FK_venda_vendedor">
             <End Role="vendedor" EntitySet="vendedor" />
             <End Role="venda" EntitySet="venda" />
           </AssociationSet>
@@ -291,16 +290,6 @@
           <Property Name="sati_id" Type="int" Nullable="false" />
           <Property Name="sati_descricao" Type="varchar" Nullable="false" MaxLength="100" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <EntityType Name="venda">
           <Key>
             <PropertyRef Name="venda_id" />
@@ -337,8 +326,8 @@
           <Property Name="ven_porc_sob_venda" Type="float" />
         </EntityType>
         <Association Name="FK_compra_item_compra">
-          <End Role="compra" Type="ComercialModel.Store.compra" Multiplicity="1" />
-          <End Role="compra_item" Type="ComercialModel.Store.compra_item" Multiplicity="*" />
+          <End Role="compra" Type="ComercialModel1.Store.compra" Multiplicity="1" />
+          <End Role="compra_item" Type="ComercialModel1.Store.compra_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="compra">
               <PropertyRef Name="com_id" />
@@ -349,8 +338,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_compra_item_produto">
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="1" />
-          <End Role="compra_item" Type="ComercialModel.Store.compra_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="1" />
+          <End Role="compra_item" Type="ComercialModel1.Store.compra_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -361,8 +350,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_compra_item_produto_tamanho">
-          <End Role="produto_tamanho" Type="ComercialModel.Store.produto_tamanho" Multiplicity="1" />
-          <End Role="compra_item" Type="ComercialModel.Store.compra_item" Multiplicity="*" />
+          <End Role="produto_tamanho" Type="ComercialModel1.Store.produto_tamanho" Multiplicity="1" />
+          <End Role="compra_item" Type="ComercialModel1.Store.compra_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto_tamanho">
               <PropertyRef Name="prta_id" />
@@ -373,8 +362,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_estoque_produto">
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="1" />
-          <End Role="estoque" Type="ComercialModel.Store.estoque" Multiplicity="0..1" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="1" />
+          <End Role="estoque" Type="ComercialModel1.Store.estoque" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -385,8 +374,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_estorno_produto">
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="1" />
-          <End Role="estorno" Type="ComercialModel.Store.estorno" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="1" />
+          <End Role="estorno" Type="ComercialModel1.Store.estorno" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -397,8 +386,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_estorno_venda">
-          <End Role="venda" Type="ComercialModel.Store.venda" Multiplicity="1" />
-          <End Role="estorno" Type="ComercialModel.Store.estorno" Multiplicity="*" />
+          <End Role="venda" Type="ComercialModel1.Store.venda" Multiplicity="1" />
+          <End Role="estorno" Type="ComercialModel1.Store.estorno" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="venda">
               <PropertyRef Name="venda_id" />
@@ -409,8 +398,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_pagamento_venda">
-          <End Role="venda" Type="ComercialModel.Store.venda" Multiplicity="1" />
-          <End Role="pagamento" Type="ComercialModel.Store.pagamento" Multiplicity="*" />
+          <End Role="venda" Type="ComercialModel1.Store.venda" Multiplicity="1" />
+          <End Role="pagamento" Type="ComercialModel1.Store.pagamento" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="venda">
               <PropertyRef Name="venda_id" />
@@ -421,8 +410,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_com_vendedor_item_produto">
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="1" />
-          <End Role="produto_com_vendedor_item" Type="ComercialModel.Store.produto_com_vendedor_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="1" />
+          <End Role="produto_com_vendedor_item" Type="ComercialModel1.Store.produto_com_vendedor_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -433,8 +422,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_com_vendedor_item_produto_com_vendedor">
-          <End Role="produto_com_vendedor" Type="ComercialModel.Store.produto_com_vendedor" Multiplicity="1" />
-          <End Role="produto_com_vendedor_item" Type="ComercialModel.Store.produto_com_vendedor_item" Multiplicity="*" />
+          <End Role="produto_com_vendedor" Type="ComercialModel1.Store.produto_com_vendedor" Multiplicity="1" />
+          <End Role="produto_com_vendedor_item" Type="ComercialModel1.Store.produto_com_vendedor_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto_com_vendedor">
               <PropertyRef Name="prcv_id" />
@@ -445,8 +434,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_com_vendedor_vendedor">
-          <End Role="vendedor" Type="ComercialModel.Store.vendedor" Multiplicity="1" />
-          <End Role="produto_com_vendedor" Type="ComercialModel.Store.produto_com_vendedor" Multiplicity="*" />
+          <End Role="vendedor" Type="ComercialModel1.Store.vendedor" Multiplicity="1" />
+          <End Role="produto_com_vendedor" Type="ComercialModel1.Store.produto_com_vendedor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vendedor">
               <PropertyRef Name="ven_id" />
@@ -457,8 +446,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_em_condicao_cliente">
-          <End Role="cliente" Type="ComercialModel.Store.cliente" Multiplicity="1" />
-          <End Role="produto_em_condicao" Type="ComercialModel.Store.produto_em_condicao" Multiplicity="*" />
+          <End Role="cliente" Type="ComercialModel1.Store.cliente" Multiplicity="1" />
+          <End Role="produto_em_condicao" Type="ComercialModel1.Store.produto_em_condicao" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cliente">
               <PropertyRef Name="cli_id" />
@@ -469,8 +458,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_em_condicao_item_produto">
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="1" />
-          <End Role="produto_em_condicao_item" Type="ComercialModel.Store.produto_em_condicao_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="1" />
+          <End Role="produto_em_condicao_item" Type="ComercialModel1.Store.produto_em_condicao_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -481,8 +470,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_em_condicao_item_produto_em_condicao">
-          <End Role="produto_em_condicao" Type="ComercialModel.Store.produto_em_condicao" Multiplicity="1" />
-          <End Role="produto_em_condicao_item" Type="ComercialModel.Store.produto_em_condicao_item" Multiplicity="*" />
+          <End Role="produto_em_condicao" Type="ComercialModel1.Store.produto_em_condicao" Multiplicity="1" />
+          <End Role="produto_em_condicao_item" Type="ComercialModel1.Store.produto_em_condicao_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto_em_condicao">
               <PropertyRef Name="prec_id" />
@@ -493,8 +482,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_em_condicao_vendedor">
-          <End Role="vendedor" Type="ComercialModel.Store.vendedor" Multiplicity="1" />
-          <End Role="produto_em_condicao" Type="ComercialModel.Store.produto_em_condicao" Multiplicity="*" />
+          <End Role="vendedor" Type="ComercialModel1.Store.vendedor" Multiplicity="1" />
+          <End Role="produto_em_condicao" Type="ComercialModel1.Store.produto_em_condicao" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vendedor">
               <PropertyRef Name="ven_id" />
@@ -505,8 +494,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_fornecedor">
-          <End Role="fornecedor" Type="ComercialModel.Store.fornecedor" Multiplicity="1" />
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="*" />
+          <End Role="fornecedor" Type="ComercialModel1.Store.fornecedor" Multiplicity="1" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="fornecedor">
               <PropertyRef Name="for_id" />
@@ -517,8 +506,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_produto_categoria">
-          <End Role="produto_categoria" Type="ComercialModel.Store.produto_categoria" Multiplicity="1" />
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="*" />
+          <End Role="produto_categoria" Type="ComercialModel1.Store.produto_categoria" Multiplicity="1" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto_categoria">
               <PropertyRef Name="prca_id" />
@@ -529,8 +518,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_saida_produto">
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="1" />
-          <End Role="saida" Type="ComercialModel.Store.saida" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="1" />
+          <End Role="saida" Type="ComercialModel1.Store.saida" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -541,8 +530,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_saida_saida_tipo">
-          <End Role="saida_tipo" Type="ComercialModel.Store.saida_tipo" Multiplicity="1" />
-          <End Role="saida" Type="ComercialModel.Store.saida" Multiplicity="*" />
+          <End Role="saida_tipo" Type="ComercialModel1.Store.saida_tipo" Multiplicity="1" />
+          <End Role="saida" Type="ComercialModel1.Store.saida" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="saida_tipo">
               <PropertyRef Name="sati_id" />
@@ -553,8 +542,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_venda_cliente">
-          <End Role="cliente" Type="ComercialModel.Store.cliente" Multiplicity="1" />
-          <End Role="venda" Type="ComercialModel.Store.venda" Multiplicity="*" />
+          <End Role="cliente" Type="ComercialModel1.Store.cliente" Multiplicity="1" />
+          <End Role="venda" Type="ComercialModel1.Store.venda" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="cliente">
               <PropertyRef Name="cli_id" />
@@ -565,8 +554,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_venda_forma_pagamento">
-          <End Role="forma_pagamento" Type="ComercialModel.Store.forma_pagamento" Multiplicity="1" />
-          <End Role="venda" Type="ComercialModel.Store.venda" Multiplicity="*" />
+          <End Role="forma_pagamento" Type="ComercialModel1.Store.forma_pagamento" Multiplicity="1" />
+          <End Role="venda" Type="ComercialModel1.Store.venda" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="forma_pagamento">
               <PropertyRef Name="fopa_id" />
@@ -577,8 +566,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_venda_item_compra">
-          <End Role="compra" Type="ComercialModel.Store.compra" Multiplicity="1" />
-          <End Role="venda_item" Type="ComercialModel.Store.venda_item" Multiplicity="*" />
+          <End Role="compra" Type="ComercialModel1.Store.compra" Multiplicity="1" />
+          <End Role="venda_item" Type="ComercialModel1.Store.venda_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="compra">
               <PropertyRef Name="com_id" />
@@ -589,8 +578,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_venda_item_produto1">
-          <End Role="produto" Type="ComercialModel.Store.produto" Multiplicity="1" />
-          <End Role="venda_item" Type="ComercialModel.Store.venda_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.Store.produto" Multiplicity="1" />
+          <End Role="venda_item" Type="ComercialModel1.Store.venda_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -601,8 +590,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_venda_item_venda">
-          <End Role="venda" Type="ComercialModel.Store.venda" Multiplicity="1" />
-          <End Role="venda_item" Type="ComercialModel.Store.venda_item" Multiplicity="*" />
+          <End Role="venda" Type="ComercialModel1.Store.venda" Multiplicity="1" />
+          <End Role="venda_item" Type="ComercialModel1.Store.venda_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="venda">
               <PropertyRef Name="venda_id" />
@@ -613,8 +602,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_venda_vendedor">
-          <End Role="vendedor" Type="ComercialModel.Store.vendedor" Multiplicity="1" />
-          <End Role="venda" Type="ComercialModel.Store.venda" Multiplicity="*" />
+          <End Role="vendedor" Type="ComercialModel1.Store.vendedor" Multiplicity="1" />
+          <End Role="venda" Type="ComercialModel1.Store.venda" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vendedor">
               <PropertyRef Name="ven_id" />
@@ -624,138 +613,129 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ComercialModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
-        <EntityContainer Name="ComercialEntities">
-          <EntitySet Name="cliente" EntityType="ComercialModel.cliente" />
-          <EntitySet Name="compra" EntityType="ComercialModel.compra" />
-          <EntitySet Name="compra_item" EntityType="ComercialModel.compra_item" />
-          <EntitySet Name="estoque" EntityType="ComercialModel.estoque" />
-          <EntitySet Name="estorno" EntityType="ComercialModel.estorno" />
-          <EntitySet Name="forma_pagamento" EntityType="ComercialModel.forma_pagamento" />
-          <EntitySet Name="fornecedor" EntityType="ComercialModel.fornecedor" />
-          <EntitySet Name="pagamento" EntityType="ComercialModel.pagamento" />
-          <EntitySet Name="produto" EntityType="ComercialModel.produto" />
-          <EntitySet Name="produto_categoria" EntityType="ComercialModel.produto_categoria" />
-          <EntitySet Name="produto_com_vendedor" EntityType="ComercialModel.produto_com_vendedor" />
-          <EntitySet Name="produto_com_vendedor_item" EntityType="ComercialModel.produto_com_vendedor_item" />
-          <EntitySet Name="produto_em_condicao" EntityType="ComercialModel.produto_em_condicao" />
-          <EntitySet Name="produto_em_condicao_item" EntityType="ComercialModel.produto_em_condicao_item" />
-          <EntitySet Name="saida" EntityType="ComercialModel.saida" />
-          <EntitySet Name="saida_tipo" EntityType="ComercialModel.saida_tipo" />
-          <EntitySet Name="sysdiagrams" EntityType="ComercialModel.sysdiagrams" />
-          <EntitySet Name="venda" EntityType="ComercialModel.venda" />
-          <EntitySet Name="venda_item" EntityType="ComercialModel.venda_item" />
-          <EntitySet Name="vendedor" EntityType="ComercialModel.vendedor" />
-          <AssociationSet Name="FK_produto_em_condicao_cliente" Association="ComercialModel.FK_produto_em_condicao_cliente">
+      <Schema Namespace="ComercialModel1" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="ComercialEntities1">
+          <EntitySet Name="cliente" EntityType="ComercialModel1.cliente" />
+          <EntitySet Name="compra" EntityType="ComercialModel1.compra" />
+          <EntitySet Name="compra_item" EntityType="ComercialModel1.compra_item" />
+          <EntitySet Name="estoque" EntityType="ComercialModel1.estoque" />
+          <EntitySet Name="estorno" EntityType="ComercialModel1.estorno" />
+          <EntitySet Name="forma_pagamento" EntityType="ComercialModel1.forma_pagamento" />
+          <EntitySet Name="fornecedor" EntityType="ComercialModel1.fornecedor" />
+          <EntitySet Name="pagamento" EntityType="ComercialModel1.pagamento" />
+          <EntitySet Name="produto" EntityType="ComercialModel1.produto" />
+          <EntitySet Name="produto_categoria" EntityType="ComercialModel1.produto_categoria" />
+          <EntitySet Name="produto_com_vendedor" EntityType="ComercialModel1.produto_com_vendedor" />
+          <EntitySet Name="produto_com_vendedor_item" EntityType="ComercialModel1.produto_com_vendedor_item" />
+          <EntitySet Name="produto_em_condicao" EntityType="ComercialModel1.produto_em_condicao" />
+          <EntitySet Name="produto_em_condicao_item" EntityType="ComercialModel1.produto_em_condicao_item" />
+          <EntitySet Name="produto_tamanho" EntityType="ComercialModel1.produto_tamanho" />
+          <EntitySet Name="saida" EntityType="ComercialModel1.saida" />
+          <EntitySet Name="saida_tipo" EntityType="ComercialModel1.saida_tipo" />
+          <EntitySet Name="venda" EntityType="ComercialModel1.venda" />
+          <EntitySet Name="venda_item" EntityType="ComercialModel1.venda_item" />
+          <EntitySet Name="vendedor" EntityType="ComercialModel1.vendedor" />
+          <AssociationSet Name="FK_produto_em_condicao_cliente" Association="ComercialModel1.FK_produto_em_condicao_cliente">
             <End Role="cliente" EntitySet="cliente" />
             <End Role="produto_em_condicao" EntitySet="produto_em_condicao" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_cliente" Association="ComercialModel.FK_venda_cliente">
+          <AssociationSet Name="FK_venda_cliente" Association="ComercialModel1.FK_venda_cliente">
             <End Role="cliente" EntitySet="cliente" />
             <End Role="venda" EntitySet="venda" />
           </AssociationSet>
-          <AssociationSet Name="FK_compra_item_compra" Association="ComercialModel.FK_compra_item_compra">
+          <AssociationSet Name="FK_compra_item_compra" Association="ComercialModel1.FK_compra_item_compra">
             <End Role="compra" EntitySet="compra" />
             <End Role="compra_item" EntitySet="compra_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_estoque_compra" Association="ComercialModel.FK_estoque_compra">
-            <End Role="compra" EntitySet="compra" />
-            <End Role="estoque" EntitySet="estoque" />
-          </AssociationSet>
-          <AssociationSet Name="FK_venda_item_compra" Association="ComercialModel.FK_venda_item_compra">
+          <AssociationSet Name="FK_venda_item_compra" Association="ComercialModel1.FK_venda_item_compra">
             <End Role="compra" EntitySet="compra" />
             <End Role="venda_item" EntitySet="venda_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_compra_item_produto" Association="ComercialModel.FK_compra_item_produto">
+          <AssociationSet Name="FK_compra_item_produto" Association="ComercialModel1.FK_compra_item_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="compra_item" EntitySet="compra_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_estoque_produto" Association="ComercialModel.FK_estoque_produto">
+          <AssociationSet Name="FK_compra_item_produto_tamanho" Association="ComercialModel1.FK_compra_item_produto_tamanho">
+            <End Role="produto_tamanho" EntitySet="produto_tamanho" />
+            <End Role="compra_item" EntitySet="compra_item" />
+          </AssociationSet>
+          <AssociationSet Name="FK_estoque_produto" Association="ComercialModel1.FK_estoque_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="estoque" EntitySet="estoque" />
           </AssociationSet>
-          <AssociationSet Name="FK_estoque_saida" Association="ComercialModel.FK_estoque_saida">
-            <End Role="saida" EntitySet="saida" />
-            <End Role="estoque" EntitySet="estoque" />
-          </AssociationSet>
-          <AssociationSet Name="FK_estorno_produto" Association="ComercialModel.FK_estorno_produto">
+          <AssociationSet Name="FK_estorno_produto" Association="ComercialModel1.FK_estorno_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="estorno" EntitySet="estorno" />
           </AssociationSet>
-          <AssociationSet Name="FK_estorno_venda" Association="ComercialModel.FK_estorno_venda">
+          <AssociationSet Name="FK_estorno_venda" Association="ComercialModel1.FK_estorno_venda">
             <End Role="venda" EntitySet="venda" />
             <End Role="estorno" EntitySet="estorno" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_forma_pagamento" Association="ComercialModel.FK_venda_forma_pagamento">
+          <AssociationSet Name="FK_venda_forma_pagamento" Association="ComercialModel1.FK_venda_forma_pagamento">
             <End Role="forma_pagamento" EntitySet="forma_pagamento" />
             <End Role="venda" EntitySet="venda" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_fornecedor" Association="ComercialModel.FK_produto_fornecedor">
+          <AssociationSet Name="FK_produto_fornecedor" Association="ComercialModel1.FK_produto_fornecedor">
             <End Role="fornecedor" EntitySet="fornecedor" />
             <End Role="produto" EntitySet="produto" />
           </AssociationSet>
-          <AssociationSet Name="FK_pagamento_venda" Association="ComercialModel.FK_pagamento_venda">
+          <AssociationSet Name="FK_pagamento_venda" Association="ComercialModel1.FK_pagamento_venda">
             <End Role="venda" EntitySet="venda" />
             <End Role="pagamento" EntitySet="pagamento" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_com_vendedor_item_produto" Association="ComercialModel.FK_produto_com_vendedor_item_produto">
+          <AssociationSet Name="FK_produto_com_vendedor_item_produto" Association="ComercialModel1.FK_produto_com_vendedor_item_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="produto_com_vendedor_item" EntitySet="produto_com_vendedor_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_em_condicao_item_produto" Association="ComercialModel.FK_produto_em_condicao_item_produto">
+          <AssociationSet Name="FK_produto_em_condicao_item_produto" Association="ComercialModel1.FK_produto_em_condicao_item_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="produto_em_condicao_item" EntitySet="produto_em_condicao_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_produto_categoria" Association="ComercialModel.FK_produto_produto_categoria">
+          <AssociationSet Name="FK_produto_produto_categoria" Association="ComercialModel1.FK_produto_produto_categoria">
             <End Role="produto_categoria" EntitySet="produto_categoria" />
             <End Role="produto" EntitySet="produto" />
           </AssociationSet>
-          <AssociationSet Name="FK_saida_produto" Association="ComercialModel.FK_saida_produto">
+          <AssociationSet Name="FK_saida_produto" Association="ComercialModel1.FK_saida_produto">
             <End Role="produto" EntitySet="produto" />
             <End Role="saida" EntitySet="saida" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_item_produto1" Association="ComercialModel.FK_venda_item_produto1">
+          <AssociationSet Name="FK_venda_item_produto1" Association="ComercialModel1.FK_venda_item_produto1">
             <End Role="produto" EntitySet="produto" />
             <End Role="venda_item" EntitySet="venda_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_com_vendedor_item_produto_com_vendedor" Association="ComercialModel.FK_produto_com_vendedor_item_produto_com_vendedor">
+          <AssociationSet Name="FK_produto_com_vendedor_item_produto_com_vendedor" Association="ComercialModel1.FK_produto_com_vendedor_item_produto_com_vendedor">
             <End Role="produto_com_vendedor" EntitySet="produto_com_vendedor" />
             <End Role="produto_com_vendedor_item" EntitySet="produto_com_vendedor_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_com_vendedor_vendedor" Association="ComercialModel.FK_produto_com_vendedor_vendedor">
+          <AssociationSet Name="FK_produto_com_vendedor_vendedor" Association="ComercialModel1.FK_produto_com_vendedor_vendedor">
             <End Role="vendedor" EntitySet="vendedor" />
             <End Role="produto_com_vendedor" EntitySet="produto_com_vendedor" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_em_condicao_item_produto_em_condicao" Association="ComercialModel.FK_produto_em_condicao_item_produto_em_condicao">
+          <AssociationSet Name="FK_produto_em_condicao_item_produto_em_condicao" Association="ComercialModel1.FK_produto_em_condicao_item_produto_em_condicao">
             <End Role="produto_em_condicao" EntitySet="produto_em_condicao" />
             <End Role="produto_em_condicao_item" EntitySet="produto_em_condicao_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_produto_em_condicao_vendedor" Association="ComercialModel.FK_produto_em_condicao_vendedor">
+          <AssociationSet Name="FK_produto_em_condicao_vendedor" Association="ComercialModel1.FK_produto_em_condicao_vendedor">
             <End Role="vendedor" EntitySet="vendedor" />
             <End Role="produto_em_condicao" EntitySet="produto_em_condicao" />
           </AssociationSet>
-          <AssociationSet Name="FK_saida_saida_tipo" Association="ComercialModel.FK_saida_saida_tipo">
+          <AssociationSet Name="FK_saida_saida_tipo" Association="ComercialModel1.FK_saida_saida_tipo">
             <End Role="saida_tipo" EntitySet="saida_tipo" />
             <End Role="saida" EntitySet="saida" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_item_venda" Association="ComercialModel.FK_venda_item_venda">
+          <AssociationSet Name="FK_venda_item_venda" Association="ComercialModel1.FK_venda_item_venda">
             <End Role="venda" EntitySet="venda" />
             <End Role="venda_item" EntitySet="venda_item" />
           </AssociationSet>
-          <AssociationSet Name="FK_venda_vendedor" Association="ComercialModel.FK_venda_vendedor">
+          <AssociationSet Name="FK_venda_vendedor" Association="ComercialModel1.FK_venda_vendedor">
             <End Role="vendedor" EntitySet="vendedor" />
             <End Role="venda" EntitySet="venda" />
           </AssociationSet>
-          <EntitySet Name="produto_tamanho" EntityType="ComercialModel.produto_tamanho" />
-          <AssociationSet Name="FK_compra_item_produto_tamanho" Association="ComercialModel.FK_compra_item_produto_tamanho">
-            <End Role="produto_tamanho" EntitySet="produto_tamanho" />
-            <End Role="compra_item" EntitySet="compra_item" /></AssociationSet>
-          <AssociationSet Name="FK_estoque_produto1" Association="ComercialModel.FK_estoque_produto1">
-            <End Role="produto" EntitySet="produto" />
-            <End Role="estoque" EntitySet="estoque" /></AssociationSet></EntityContainer>
+        </EntityContainer>
         <EntityType Name="cliente">
           <Key>
             <PropertyRef Name="cli_id" />
@@ -770,8 +750,8 @@
           <Property Name="cli_manequim" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
           <Property Name="cli_data_nascimento" Type="DateTime" />
           <Property Name="cli_observacao" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="produto_em_condicao" Relationship="ComercialModel.FK_produto_em_condicao_cliente" FromRole="cliente" ToRole="produto_em_condicao" />
-          <NavigationProperty Name="venda" Relationship="ComercialModel.FK_venda_cliente" FromRole="cliente" ToRole="venda" />
+          <NavigationProperty Name="produto_em_condicao" Relationship="ComercialModel1.FK_produto_em_condicao_cliente" FromRole="cliente" ToRole="produto_em_condicao" />
+          <NavigationProperty Name="venda" Relationship="ComercialModel1.FK_venda_cliente" FromRole="cliente" ToRole="venda" />
         </EntityType>
         <EntityType Name="compra">
           <Key>
@@ -779,9 +759,8 @@
           </Key>
           <Property Name="com_id" Type="Int32" Nullable="false" />
           <Property Name="com_data_compra" Type="DateTime" />
-          <NavigationProperty Name="compra_item" Relationship="ComercialModel.FK_compra_item_compra" FromRole="compra" ToRole="compra_item" />
-          <NavigationProperty Name="estoque" Relationship="ComercialModel.FK_estoque_compra" FromRole="compra" ToRole="estoque" />
-          <NavigationProperty Name="venda_item" Relationship="ComercialModel.FK_venda_item_compra" FromRole="compra" ToRole="venda_item" />
+          <NavigationProperty Name="compra_item" Relationship="ComercialModel1.FK_compra_item_compra" FromRole="compra" ToRole="compra_item" />
+          <NavigationProperty Name="venda_item" Relationship="ComercialModel1.FK_venda_item_compra" FromRole="compra" ToRole="venda_item" />
         </EntityType>
         <EntityType Name="compra_item">
           <Key>
@@ -796,22 +775,20 @@
           <Property Name="coit_porc_ganho" Type="Double" Nullable="false" />
           <Property Name="coit_valor_venda" Type="Double" Nullable="false" />
           <Property Name="coit_valor_total_venda" Type="Double" Nullable="false" />
-          <NavigationProperty Name="compra" Relationship="ComercialModel.FK_compra_item_compra" FromRole="compra_item" ToRole="compra" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_compra_item_produto" FromRole="compra_item" ToRole="produto" />
-          <NavigationProperty Name="produto_tamanho" Relationship="ComercialModel.FK_compra_item_produto_tamanho" FromRole="compra_item" ToRole="produto_tamanho" /></EntityType>
+          <NavigationProperty Name="compra" Relationship="ComercialModel1.FK_compra_item_compra" FromRole="compra_item" ToRole="compra" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_compra_item_produto" FromRole="compra_item" ToRole="produto" />
+          <NavigationProperty Name="produto_tamanho" Relationship="ComercialModel1.FK_compra_item_produto_tamanho" FromRole="compra_item" ToRole="produto_tamanho" />
+        </EntityType>
         <EntityType Name="estoque">
           <Key>
-            <PropertyRef Name="est_id" />
-            <PropertyRef Name="prod_id" /></Key>
-          <Property Name="est_id" Type="Int32" Nullable="false" />
+            <PropertyRef Name="prod_id" />
+          </Key>
+          <Property Name="prod_id" Type="Int32" Nullable="false" />
           <Property Name="est_qtde_estoque" Type="Int32" Nullable="false" />
           <Property Name="est_valor_total" Type="Double" Nullable="false" />
-          <NavigationProperty Name="compra" Relationship="ComercialModel.FK_estoque_compra" FromRole="estoque" ToRole="compra" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_estoque_produto" FromRole="estoque" ToRole="produto" />
-          <NavigationProperty Name="saida" Relationship="ComercialModel.FK_estoque_saida" FromRole="estoque" ToRole="saida" />
           <Property Name="est_ativo" Type="Byte" Nullable="false" />
-          <NavigationProperty Name="produto_1" Relationship="ComercialModel.FK_estoque_produto1" FromRole="estoque" ToRole="produto" />
-          <Property Name="prod_id" Type="Int32" Nullable="false" /></EntityType>
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_estoque_produto" FromRole="estoque" ToRole="produto" />
+        </EntityType>
         <EntityType Name="estorno">
           <Key>
             <PropertyRef Name="esto_id" />
@@ -819,8 +796,8 @@
           <Property Name="esto_id" Type="Int32" Nullable="false" />
           <Property Name="esto_data_estorno" Type="DateTime" Nullable="false" />
           <Property Name="esto_qtde_estorno" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_estorno_produto" FromRole="estorno" ToRole="produto" />
-          <NavigationProperty Name="venda" Relationship="ComercialModel.FK_estorno_venda" FromRole="estorno" ToRole="venda" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_estorno_produto" FromRole="estorno" ToRole="produto" />
+          <NavigationProperty Name="venda" Relationship="ComercialModel1.FK_estorno_venda" FromRole="estorno" ToRole="venda" />
         </EntityType>
         <EntityType Name="forma_pagamento">
           <Key>
@@ -831,7 +808,7 @@
           <Property Name="fopa_qtde_vezes" Type="Int32" />
           <Property Name="fopa_flag_acrescimo" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
           <Property Name="fopa_porcentagem" Type="Double" />
-          <NavigationProperty Name="venda" Relationship="ComercialModel.FK_venda_forma_pagamento" FromRole="forma_pagamento" ToRole="venda" />
+          <NavigationProperty Name="venda" Relationship="ComercialModel1.FK_venda_forma_pagamento" FromRole="forma_pagamento" ToRole="venda" />
         </EntityType>
         <EntityType Name="fornecedor">
           <Key>
@@ -844,7 +821,7 @@
           <Property Name="for_telefone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="for_contato" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="for_cidade" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_produto_fornecedor" FromRole="fornecedor" ToRole="produto" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_produto_fornecedor" FromRole="fornecedor" ToRole="produto" />
         </EntityType>
         <EntityType Name="pagamento">
           <Key>
@@ -855,7 +832,7 @@
           <Property Name="pag_valor" Type="Double" Nullable="false" />
           <Property Name="pag_realizado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
           <Property Name="pag_num_parcela" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="venda" Relationship="ComercialModel.FK_pagamento_venda" FromRole="pagamento" ToRole="venda" />
+          <NavigationProperty Name="venda" Relationship="ComercialModel1.FK_pagamento_venda" FromRole="pagamento" ToRole="venda" />
         </EntityType>
         <EntityType Name="produto">
           <Key>
@@ -863,24 +840,24 @@
           </Key>
           <Property Name="prod_id" Type="Int32" Nullable="false" />
           <Property Name="prod_codigo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="compra_item" Relationship="ComercialModel.FK_compra_item_produto" FromRole="produto" ToRole="compra_item" />
-          <NavigationProperty Name="estoque" Relationship="ComercialModel.FK_estoque_produto" FromRole="produto" ToRole="estoque" />
-          <NavigationProperty Name="estorno" Relationship="ComercialModel.FK_estorno_produto" FromRole="produto" ToRole="estorno" />
-          <NavigationProperty Name="fornecedor" Relationship="ComercialModel.FK_produto_fornecedor" FromRole="produto" ToRole="fornecedor" />
-          <NavigationProperty Name="produto_com_vendedor_item" Relationship="ComercialModel.FK_produto_com_vendedor_item_produto" FromRole="produto" ToRole="produto_com_vendedor_item" />
-          <NavigationProperty Name="produto_em_condicao_item" Relationship="ComercialModel.FK_produto_em_condicao_item_produto" FromRole="produto" ToRole="produto_em_condicao_item" />
-          <NavigationProperty Name="produto_categoria" Relationship="ComercialModel.FK_produto_produto_categoria" FromRole="produto" ToRole="produto_categoria" />
-          <NavigationProperty Name="saida" Relationship="ComercialModel.FK_saida_produto" FromRole="produto" ToRole="saida" />
-          <NavigationProperty Name="venda_item" Relationship="ComercialModel.FK_venda_item_produto1" FromRole="produto" ToRole="venda_item" />
-          <Property Name="prod_descricao" Type="String" Nullable="false" />
-          <NavigationProperty Name="estoque_1" Relationship="ComercialModel.FK_estoque_produto1" FromRole="produto" ToRole="estoque" /></EntityType>
+          <Property Name="prod_descricao" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="compra_item" Relationship="ComercialModel1.FK_compra_item_produto" FromRole="produto" ToRole="compra_item" />
+          <NavigationProperty Name="estoque" Relationship="ComercialModel1.FK_estoque_produto" FromRole="produto" ToRole="estoque" />
+          <NavigationProperty Name="estorno" Relationship="ComercialModel1.FK_estorno_produto" FromRole="produto" ToRole="estorno" />
+          <NavigationProperty Name="fornecedor" Relationship="ComercialModel1.FK_produto_fornecedor" FromRole="produto" ToRole="fornecedor" />
+          <NavigationProperty Name="produto_com_vendedor_item" Relationship="ComercialModel1.FK_produto_com_vendedor_item_produto" FromRole="produto" ToRole="produto_com_vendedor_item" />
+          <NavigationProperty Name="produto_em_condicao_item" Relationship="ComercialModel1.FK_produto_em_condicao_item_produto" FromRole="produto" ToRole="produto_em_condicao_item" />
+          <NavigationProperty Name="produto_categoria" Relationship="ComercialModel1.FK_produto_produto_categoria" FromRole="produto" ToRole="produto_categoria" />
+          <NavigationProperty Name="saida" Relationship="ComercialModel1.FK_saida_produto" FromRole="produto" ToRole="saida" />
+          <NavigationProperty Name="venda_item" Relationship="ComercialModel1.FK_venda_item_produto1" FromRole="produto" ToRole="venda_item" />
+        </EntityType>
         <EntityType Name="produto_categoria">
           <Key>
             <PropertyRef Name="prca_id" />
           </Key>
           <Property Name="prca_id" Type="Int32" Nullable="false" />
           <Property Name="prca_categoria" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_produto_produto_categoria" FromRole="produto_categoria" ToRole="produto" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_produto_produto_categoria" FromRole="produto_categoria" ToRole="produto" />
         </EntityType>
         <EntityType Name="produto_com_vendedor">
           <Key>
@@ -888,8 +865,8 @@
           </Key>
           <Property Name="prcv_id" Type="Int32" Nullable="false" />
           <Property Name="prcv_data_entrega" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="produto_com_vendedor_item" Relationship="ComercialModel.FK_produto_com_vendedor_item_produto_com_vendedor" FromRole="produto_com_vendedor" ToRole="produto_com_vendedor_item" />
-          <NavigationProperty Name="vendedor" Relationship="ComercialModel.FK_produto_com_vendedor_vendedor" FromRole="produto_com_vendedor" ToRole="vendedor" />
+          <NavigationProperty Name="produto_com_vendedor_item" Relationship="ComercialModel1.FK_produto_com_vendedor_item_produto_com_vendedor" FromRole="produto_com_vendedor" ToRole="produto_com_vendedor_item" />
+          <NavigationProperty Name="vendedor" Relationship="ComercialModel1.FK_produto_com_vendedor_vendedor" FromRole="produto_com_vendedor" ToRole="vendedor" />
         </EntityType>
         <EntityType Name="produto_com_vendedor_item">
           <Key>
@@ -899,8 +876,8 @@
           <Property Name="prcv_id" Type="Int32" Nullable="false" />
           <Property Name="prod_id" Type="Int32" Nullable="false" />
           <Property Name="prcvi_qtde" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_produto_com_vendedor_item_produto" FromRole="produto_com_vendedor_item" ToRole="produto" />
-          <NavigationProperty Name="produto_com_vendedor" Relationship="ComercialModel.FK_produto_com_vendedor_item_produto_com_vendedor" FromRole="produto_com_vendedor_item" ToRole="produto_com_vendedor" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_produto_com_vendedor_item_produto" FromRole="produto_com_vendedor_item" ToRole="produto" />
+          <NavigationProperty Name="produto_com_vendedor" Relationship="ComercialModel1.FK_produto_com_vendedor_item_produto_com_vendedor" FromRole="produto_com_vendedor_item" ToRole="produto_com_vendedor" />
         </EntityType>
         <EntityType Name="produto_em_condicao">
           <Key>
@@ -909,9 +886,9 @@
           <Property Name="prec_id" Type="Int32" Nullable="false" />
           <Property Name="prec_data_emprestimo" Type="DateTime" Nullable="false" />
           <Property Name="prec_data_devolucao" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="cliente" Relationship="ComercialModel.FK_produto_em_condicao_cliente" FromRole="produto_em_condicao" ToRole="cliente" />
-          <NavigationProperty Name="produto_em_condicao_item" Relationship="ComercialModel.FK_produto_em_condicao_item_produto_em_condicao" FromRole="produto_em_condicao" ToRole="produto_em_condicao_item" />
-          <NavigationProperty Name="vendedor" Relationship="ComercialModel.FK_produto_em_condicao_vendedor" FromRole="produto_em_condicao" ToRole="vendedor" />
+          <NavigationProperty Name="cliente" Relationship="ComercialModel1.FK_produto_em_condicao_cliente" FromRole="produto_em_condicao" ToRole="cliente" />
+          <NavigationProperty Name="produto_em_condicao_item" Relationship="ComercialModel1.FK_produto_em_condicao_item_produto_em_condicao" FromRole="produto_em_condicao" ToRole="produto_em_condicao_item" />
+          <NavigationProperty Name="vendedor" Relationship="ComercialModel1.FK_produto_em_condicao_vendedor" FromRole="produto_em_condicao" ToRole="vendedor" />
         </EntityType>
         <EntityType Name="produto_em_condicao_item">
           <Key>
@@ -922,8 +899,16 @@
           <Property Name="prod_id" Type="Int32" Nullable="false" />
           <Property Name="preci_qtde" Type="Int32" Nullable="false" />
           <Property Name="preci_devolvido" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_produto_em_condicao_item_produto" FromRole="produto_em_condicao_item" ToRole="produto" />
-          <NavigationProperty Name="produto_em_condicao" Relationship="ComercialModel.FK_produto_em_condicao_item_produto_em_condicao" FromRole="produto_em_condicao_item" ToRole="produto_em_condicao" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_produto_em_condicao_item_produto" FromRole="produto_em_condicao_item" ToRole="produto" />
+          <NavigationProperty Name="produto_em_condicao" Relationship="ComercialModel1.FK_produto_em_condicao_item_produto_em_condicao" FromRole="produto_em_condicao_item" ToRole="produto_em_condicao" />
+        </EntityType>
+        <EntityType Name="produto_tamanho">
+          <Key>
+            <PropertyRef Name="prta_id" />
+          </Key>
+          <Property Name="prta_id" Type="Int32" Nullable="false" />
+          <Property Name="prta_descricao" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="compra_item" Relationship="ComercialModel1.FK_compra_item_produto_tamanho" FromRole="produto_tamanho" ToRole="compra_item" />
         </EntityType>
         <EntityType Name="saida">
           <Key>
@@ -932,9 +917,8 @@
           <Property Name="sai_id" Type="Int32" Nullable="false" />
           <Property Name="sai_data_saida" Type="DateTime" Nullable="false" />
           <Property Name="sai_qtde" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="estoque" Relationship="ComercialModel.FK_estoque_saida" FromRole="saida" ToRole="estoque" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_saida_produto" FromRole="saida" ToRole="produto" />
-          <NavigationProperty Name="saida_tipo" Relationship="ComercialModel.FK_saida_saida_tipo" FromRole="saida" ToRole="saida_tipo" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_saida_produto" FromRole="saida" ToRole="produto" />
+          <NavigationProperty Name="saida_tipo" Relationship="ComercialModel1.FK_saida_saida_tipo" FromRole="saida" ToRole="saida_tipo" />
         </EntityType>
         <EntityType Name="saida_tipo">
           <Key>
@@ -942,17 +926,7 @@
           </Key>
           <Property Name="sati_id" Type="Int32" Nullable="false" />
           <Property Name="sati_descricao" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="saida" Relationship="ComercialModel.FK_saida_saida_tipo" FromRole="saida_tipo" ToRole="saida" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="saida" Relationship="ComercialModel1.FK_saida_saida_tipo" FromRole="saida_tipo" ToRole="saida" />
         </EntityType>
         <EntityType Name="venda">
           <Key>
@@ -960,12 +934,12 @@
           </Key>
           <Property Name="venda_id" Type="Int32" Nullable="false" />
           <Property Name="venda_data_venda" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="cliente" Relationship="ComercialModel.FK_venda_cliente" FromRole="venda" ToRole="cliente" />
-          <NavigationProperty Name="estorno" Relationship="ComercialModel.FK_estorno_venda" FromRole="venda" ToRole="estorno" />
-          <NavigationProperty Name="forma_pagamento" Relationship="ComercialModel.FK_venda_forma_pagamento" FromRole="venda" ToRole="forma_pagamento" />
-          <NavigationProperty Name="pagamento" Relationship="ComercialModel.FK_pagamento_venda" FromRole="venda" ToRole="pagamento" />
-          <NavigationProperty Name="venda_item" Relationship="ComercialModel.FK_venda_item_venda" FromRole="venda" ToRole="venda_item" />
-          <NavigationProperty Name="vendedor" Relationship="ComercialModel.FK_venda_vendedor" FromRole="venda" ToRole="vendedor" />
+          <NavigationProperty Name="cliente" Relationship="ComercialModel1.FK_venda_cliente" FromRole="venda" ToRole="cliente" />
+          <NavigationProperty Name="estorno" Relationship="ComercialModel1.FK_estorno_venda" FromRole="venda" ToRole="estorno" />
+          <NavigationProperty Name="forma_pagamento" Relationship="ComercialModel1.FK_venda_forma_pagamento" FromRole="venda" ToRole="forma_pagamento" />
+          <NavigationProperty Name="pagamento" Relationship="ComercialModel1.FK_pagamento_venda" FromRole="venda" ToRole="pagamento" />
+          <NavigationProperty Name="venda_item" Relationship="ComercialModel1.FK_venda_item_venda" FromRole="venda" ToRole="venda_item" />
+          <NavigationProperty Name="vendedor" Relationship="ComercialModel1.FK_venda_vendedor" FromRole="venda" ToRole="vendedor" />
         </EntityType>
         <EntityType Name="venda_item">
           <Key>
@@ -980,9 +954,9 @@
           <Property Name="veit_val_total_bruto" Type="Double" Nullable="false" />
           <Property Name="veit_val_liquido" Type="Double" Nullable="false" />
           <Property Name="veit_val_venda" Type="Double" Nullable="false" />
-          <NavigationProperty Name="compra" Relationship="ComercialModel.FK_venda_item_compra" FromRole="venda_item" ToRole="compra" />
-          <NavigationProperty Name="produto" Relationship="ComercialModel.FK_venda_item_produto1" FromRole="venda_item" ToRole="produto" />
-          <NavigationProperty Name="venda" Relationship="ComercialModel.FK_venda_item_venda" FromRole="venda_item" ToRole="venda" />
+          <NavigationProperty Name="compra" Relationship="ComercialModel1.FK_venda_item_compra" FromRole="venda_item" ToRole="compra" />
+          <NavigationProperty Name="produto" Relationship="ComercialModel1.FK_venda_item_produto1" FromRole="venda_item" ToRole="produto" />
+          <NavigationProperty Name="venda" Relationship="ComercialModel1.FK_venda_item_venda" FromRole="venda_item" ToRole="venda" />
         </EntityType>
         <EntityType Name="vendedor">
           <Key>
@@ -994,21 +968,21 @@
           <Property Name="ven_telefone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="ven_email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="ven_porc_sob_venda" Type="Double" />
-          <NavigationProperty Name="produto_com_vendedor" Relationship="ComercialModel.FK_produto_com_vendedor_vendedor" FromRole="vendedor" ToRole="produto_com_vendedor" />
-          <NavigationProperty Name="produto_em_condicao" Relationship="ComercialModel.FK_produto_em_condicao_vendedor" FromRole="vendedor" ToRole="produto_em_condicao" />
-          <NavigationProperty Name="venda" Relationship="ComercialModel.FK_venda_vendedor" FromRole="vendedor" ToRole="venda" />
+          <NavigationProperty Name="produto_com_vendedor" Relationship="ComercialModel1.FK_produto_com_vendedor_vendedor" FromRole="vendedor" ToRole="produto_com_vendedor" />
+          <NavigationProperty Name="produto_em_condicao" Relationship="ComercialModel1.FK_produto_em_condicao_vendedor" FromRole="vendedor" ToRole="produto_em_condicao" />
+          <NavigationProperty Name="venda" Relationship="ComercialModel1.FK_venda_vendedor" FromRole="vendedor" ToRole="venda" />
         </EntityType>
         <Association Name="FK_produto_em_condicao_cliente">
-          <End Role="cliente" Type="ComercialModel.cliente" Multiplicity="1" />
-          <End Role="produto_em_condicao" Type="ComercialModel.produto_em_condicao" Multiplicity="*" />
+          <End Role="cliente" Type="ComercialModel1.cliente" Multiplicity="1" />
+          <End Role="produto_em_condicao" Type="ComercialModel1.produto_em_condicao" Multiplicity="*" />
         </Association>
         <Association Name="FK_venda_cliente">
-          <End Role="cliente" Type="ComercialModel.cliente" Multiplicity="1" />
-          <End Role="venda" Type="ComercialModel.venda" Multiplicity="*" />
+          <End Role="cliente" Type="ComercialModel1.cliente" Multiplicity="1" />
+          <End Role="venda" Type="ComercialModel1.venda" Multiplicity="*" />
         </Association>
         <Association Name="FK_compra_item_compra">
-          <End Role="compra" Type="ComercialModel.compra" Multiplicity="1" />
-          <End Role="compra_item" Type="ComercialModel.compra_item" Multiplicity="*" />
+          <End Role="compra" Type="ComercialModel1.compra" Multiplicity="1" />
+          <End Role="compra_item" Type="ComercialModel1.compra_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="compra">
               <PropertyRef Name="com_id" />
@@ -1018,13 +992,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_estoque_compra">
-          <End Role="compra" Type="ComercialModel.compra" Multiplicity="1" />
-          <End Role="estoque" Type="ComercialModel.estoque" Multiplicity="*" />
-        </Association>
         <Association Name="FK_venda_item_compra">
-          <End Role="compra" Type="ComercialModel.compra" Multiplicity="1" />
-          <End Role="venda_item" Type="ComercialModel.venda_item" Multiplicity="*" />
+          <End Role="compra" Type="ComercialModel1.compra" Multiplicity="1" />
+          <End Role="venda_item" Type="ComercialModel1.venda_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="compra">
               <PropertyRef Name="com_id" />
@@ -1035,8 +1005,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_compra_item_produto">
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="1" />
-          <End Role="compra_item" Type="ComercialModel.compra_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="1" />
+          <End Role="compra_item" Type="ComercialModel1.compra_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -1046,41 +1016,45 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_compra_item_produto_tamanho">
+          <End Role="produto_tamanho" Type="ComercialModel1.produto_tamanho" Multiplicity="1" />
+          <End Role="compra_item" Type="ComercialModel1.compra_item" Multiplicity="*" />
+        </Association>
         <Association Name="FK_estoque_produto">
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="1" />
-          <End Role="estoque" Type="ComercialModel.estoque" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="1" />
+          <End Role="estoque" Type="ComercialModel1.estoque" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="produto">
-              <PropertyRef Name="prod_id" /></Principal>
+              <PropertyRef Name="prod_id" />
+            </Principal>
             <Dependent Role="estoque">
-              <PropertyRef Name="prod_id" /></Dependent></ReferentialConstraint></Association>
-        <Association Name="FK_estoque_saida">
-          <End Role="saida" Type="ComercialModel.saida" Multiplicity="1" />
-          <End Role="estoque" Type="ComercialModel.estoque" Multiplicity="*" />
+              <PropertyRef Name="prod_id" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <Association Name="FK_estorno_produto">
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="1" />
-          <End Role="estorno" Type="ComercialModel.estorno" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="1" />
+          <End Role="estorno" Type="ComercialModel1.estorno" Multiplicity="*" />
         </Association>
         <Association Name="FK_estorno_venda">
-          <End Role="venda" Type="ComercialModel.venda" Multiplicity="1" />
-          <End Role="estorno" Type="ComercialModel.estorno" Multiplicity="*" />
+          <End Role="venda" Type="ComercialModel1.venda" Multiplicity="1" />
+          <End Role="estorno" Type="ComercialModel1.estorno" Multiplicity="*" />
         </Association>
         <Association Name="FK_venda_forma_pagamento">
-          <End Role="forma_pagamento" Type="ComercialModel.forma_pagamento" Multiplicity="1" />
-          <End Role="venda" Type="ComercialModel.venda" Multiplicity="*" />
+          <End Role="forma_pagamento" Type="ComercialModel1.forma_pagamento" Multiplicity="1" />
+          <End Role="venda" Type="ComercialModel1.venda" Multiplicity="*" />
         </Association>
         <Association Name="FK_produto_fornecedor">
-          <End Role="fornecedor" Type="ComercialModel.fornecedor" Multiplicity="1" />
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="*" />
+          <End Role="fornecedor" Type="ComercialModel1.fornecedor" Multiplicity="1" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="*" />
         </Association>
         <Association Name="FK_pagamento_venda">
-          <End Role="venda" Type="ComercialModel.venda" Multiplicity="1" />
-          <End Role="pagamento" Type="ComercialModel.pagamento" Multiplicity="*" />
+          <End Role="venda" Type="ComercialModel1.venda" Multiplicity="1" />
+          <End Role="pagamento" Type="ComercialModel1.pagamento" Multiplicity="*" />
         </Association>
         <Association Name="FK_produto_com_vendedor_item_produto">
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="1" />
-          <End Role="produto_com_vendedor_item" Type="ComercialModel.produto_com_vendedor_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="1" />
+          <End Role="produto_com_vendedor_item" Type="ComercialModel1.produto_com_vendedor_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -1091,8 +1065,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_em_condicao_item_produto">
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="1" />
-          <End Role="produto_em_condicao_item" Type="ComercialModel.produto_em_condicao_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="1" />
+          <End Role="produto_em_condicao_item" Type="ComercialModel1.produto_em_condicao_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -1103,16 +1077,16 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_produto_categoria">
-          <End Role="produto_categoria" Type="ComercialModel.produto_categoria" Multiplicity="1" />
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="*" />
+          <End Role="produto_categoria" Type="ComercialModel1.produto_categoria" Multiplicity="1" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="*" />
         </Association>
         <Association Name="FK_saida_produto">
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="1" />
-          <End Role="saida" Type="ComercialModel.saida" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="1" />
+          <End Role="saida" Type="ComercialModel1.saida" Multiplicity="*" />
         </Association>
         <Association Name="FK_venda_item_produto1">
-          <End Role="produto" Type="ComercialModel.produto" Multiplicity="1" />
-          <End Role="venda_item" Type="ComercialModel.venda_item" Multiplicity="*" />
+          <End Role="produto" Type="ComercialModel1.produto" Multiplicity="1" />
+          <End Role="venda_item" Type="ComercialModel1.venda_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto">
               <PropertyRef Name="prod_id" />
@@ -1123,8 +1097,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_com_vendedor_item_produto_com_vendedor">
-          <End Role="produto_com_vendedor" Type="ComercialModel.produto_com_vendedor" Multiplicity="1" />
-          <End Role="produto_com_vendedor_item" Type="ComercialModel.produto_com_vendedor_item" Multiplicity="*" />
+          <End Role="produto_com_vendedor" Type="ComercialModel1.produto_com_vendedor" Multiplicity="1" />
+          <End Role="produto_com_vendedor_item" Type="ComercialModel1.produto_com_vendedor_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto_com_vendedor">
               <PropertyRef Name="prcv_id" />
@@ -1135,12 +1109,12 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_com_vendedor_vendedor">
-          <End Role="vendedor" Type="ComercialModel.vendedor" Multiplicity="1" />
-          <End Role="produto_com_vendedor" Type="ComercialModel.produto_com_vendedor" Multiplicity="*" />
+          <End Role="vendedor" Type="ComercialModel1.vendedor" Multiplicity="1" />
+          <End Role="produto_com_vendedor" Type="ComercialModel1.produto_com_vendedor" Multiplicity="*" />
         </Association>
         <Association Name="FK_produto_em_condicao_item_produto_em_condicao">
-          <End Role="produto_em_condicao" Type="ComercialModel.produto_em_condicao" Multiplicity="1" />
-          <End Role="produto_em_condicao_item" Type="ComercialModel.produto_em_condicao_item" Multiplicity="*" />
+          <End Role="produto_em_condicao" Type="ComercialModel1.produto_em_condicao" Multiplicity="1" />
+          <End Role="produto_em_condicao_item" Type="ComercialModel1.produto_em_condicao_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="produto_em_condicao">
               <PropertyRef Name="prec_id" />
@@ -1151,16 +1125,16 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_produto_em_condicao_vendedor">
-          <End Role="vendedor" Type="ComercialModel.vendedor" Multiplicity="1" />
-          <End Role="produto_em_condicao" Type="ComercialModel.produto_em_condicao" Multiplicity="*" />
+          <End Role="vendedor" Type="ComercialModel1.vendedor" Multiplicity="1" />
+          <End Role="produto_em_condicao" Type="ComercialModel1.produto_em_condicao" Multiplicity="*" />
         </Association>
         <Association Name="FK_saida_saida_tipo">
-          <End Role="saida_tipo" Type="ComercialModel.saida_tipo" Multiplicity="1" />
-          <End Role="saida" Type="ComercialModel.saida" Multiplicity="*" />
+          <End Role="saida_tipo" Type="ComercialModel1.saida_tipo" Multiplicity="1" />
+          <End Role="saida" Type="ComercialModel1.saida" Multiplicity="*" />
         </Association>
         <Association Name="FK_venda_item_venda">
-          <End Role="venda" Type="ComercialModel.venda" Multiplicity="1" />
-          <End Role="venda_item" Type="ComercialModel.venda_item" Multiplicity="*" />
+          <End Role="venda" Type="ComercialModel1.venda" Multiplicity="1" />
+          <End Role="venda_item" Type="ComercialModel1.venda_item" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="venda">
               <PropertyRef Name="venda_id" />
@@ -1171,33 +1145,17 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_venda_vendedor">
-          <End Role="vendedor" Type="ComercialModel.vendedor" Multiplicity="1" />
-          <End Role="venda" Type="ComercialModel.venda" Multiplicity="*" />
+          <End Role="vendedor" Type="ComercialModel1.vendedor" Multiplicity="1" />
+          <End Role="venda" Type="ComercialModel1.venda" Multiplicity="*" />
         </Association>
-        <EntityType Name="produto_tamanho">
-          <Key>
-            <PropertyRef Name="prta_id" /></Key>
-          <Property Name="prta_id" Type="Int32" Nullable="false" />
-          <Property Name="prta_descricao" Type="String" Nullable="false" />
-          <NavigationProperty Name="compra_item" Relationship="ComercialModel.FK_compra_item_produto_tamanho" FromRole="produto_tamanho" ToRole="compra_item" /></EntityType>
-        <Association Name="FK_compra_item_produto_tamanho">
-          <End Type="ComercialModel.produto_tamanho" Role="produto_tamanho" Multiplicity="1" />
-          <End Type="ComercialModel.compra_item" Role="compra_item" Multiplicity="*" /></Association>
-        <Association Name="FK_estoque_produto1">
-          <End Type="ComercialModel.produto" Role="produto" Multiplicity="1" />
-          <End Type="ComercialModel.estoque" Role="estoque" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="produto">
-              <PropertyRef Name="prod_id" /></Principal>
-            <Dependent Role="estoque">
-              <PropertyRef Name="prod_id" /></Dependent></ReferentialConstraint></Association></Schema>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
-        <EntityContainerMapping StorageEntityContainer="ComercialModelStoreContainer" CdmEntityContainer="ComercialEntities">
+        <EntityContainerMapping StorageEntityContainer="ComercialModel1StoreContainer" CdmEntityContainer="ComercialEntities1">
           <EntitySetMapping Name="cliente">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.cliente)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.cliente)">
               <MappingFragment StoreEntitySet="cliente">
                 <ScalarProperty Name="cli_id" ColumnName="cli_id" />
                 <ScalarProperty Name="cli_nome" ColumnName="cli_nome" />
@@ -1213,7 +1171,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="compra">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.compra)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.compra)">
               <MappingFragment StoreEntitySet="compra">
                 <ScalarProperty Name="com_id" ColumnName="com_id" />
                 <ScalarProperty Name="com_data_compra" ColumnName="com_data_compra" />
@@ -1221,7 +1179,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="compra_item">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.compra_item)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.compra_item)">
               <MappingFragment StoreEntitySet="compra_item">
                 <ScalarProperty Name="com_id" ColumnName="com_id" />
                 <ScalarProperty Name="prod_id" ColumnName="prod_id" />
@@ -1235,17 +1193,17 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="estoque">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.estoque)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.estoque)">
               <MappingFragment StoreEntitySet="estoque">
                 <ScalarProperty Name="prod_id" ColumnName="prod_id" />
-                <ScalarProperty Name="est_ativo" ColumnName="est_ativo" />
                 <ScalarProperty Name="est_qtde_estoque" ColumnName="est_qtde_estoque" />
                 <ScalarProperty Name="est_valor_total" ColumnName="est_valor_total" />
+                <ScalarProperty Name="est_ativo" ColumnName="est_ativo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="estorno">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.estorno)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.estorno)">
               <MappingFragment StoreEntitySet="estorno">
                 <ScalarProperty Name="esto_id" ColumnName="esto_id" />
                 <ScalarProperty Name="esto_data_estorno" ColumnName="esto_data_estorno" />
@@ -1254,7 +1212,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="forma_pagamento">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.forma_pagamento)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.forma_pagamento)">
               <MappingFragment StoreEntitySet="forma_pagamento">
                 <ScalarProperty Name="fopa_id" ColumnName="fopa_id" />
                 <ScalarProperty Name="fopa_descricao" ColumnName="fopa_descricao" />
@@ -1265,7 +1223,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="fornecedor">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.fornecedor)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.fornecedor)">
               <MappingFragment StoreEntitySet="fornecedor">
                 <ScalarProperty Name="for_id" ColumnName="for_id" />
                 <ScalarProperty Name="for_nome" ColumnName="for_nome" />
@@ -1278,7 +1236,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="pagamento">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.pagamento)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.pagamento)">
               <MappingFragment StoreEntitySet="pagamento">
                 <ScalarProperty Name="pag_id" ColumnName="pag_id" />
                 <ScalarProperty Name="pag_data_pagamento" ColumnName="pag_data_pagamento" />
@@ -1289,16 +1247,16 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="produto">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.produto)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.produto)">
               <MappingFragment StoreEntitySet="produto">
-                <ScalarProperty Name="prod_descricao" ColumnName="prod_descricao" />
                 <ScalarProperty Name="prod_id" ColumnName="prod_id" />
                 <ScalarProperty Name="prod_codigo" ColumnName="prod_codigo" />
+                <ScalarProperty Name="prod_descricao" ColumnName="prod_descricao" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="produto_categoria">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.produto_categoria)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.produto_categoria)">
               <MappingFragment StoreEntitySet="produto_categoria">
                 <ScalarProperty Name="prca_id" ColumnName="prca_id" />
                 <ScalarProperty Name="prca_categoria" ColumnName="prca_categoria" />
@@ -1306,7 +1264,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="produto_com_vendedor">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.produto_com_vendedor)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.produto_com_vendedor)">
               <MappingFragment StoreEntitySet="produto_com_vendedor">
                 <ScalarProperty Name="prcv_id" ColumnName="prcv_id" />
                 <ScalarProperty Name="prcv_data_entrega" ColumnName="prcv_data_entrega" />
@@ -1314,7 +1272,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="produto_com_vendedor_item">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.produto_com_vendedor_item)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.produto_com_vendedor_item)">
               <MappingFragment StoreEntitySet="produto_com_vendedor_item">
                 <ScalarProperty Name="prcv_id" ColumnName="prcv_id" />
                 <ScalarProperty Name="prod_id" ColumnName="prod_id" />
@@ -1323,7 +1281,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="produto_em_condicao">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.produto_em_condicao)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.produto_em_condicao)">
               <MappingFragment StoreEntitySet="produto_em_condicao">
                 <ScalarProperty Name="prec_id" ColumnName="prec_id" />
                 <ScalarProperty Name="prec_data_emprestimo" ColumnName="prec_data_emprestimo" />
@@ -1332,7 +1290,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="produto_em_condicao_item">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.produto_em_condicao_item)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.produto_em_condicao_item)">
               <MappingFragment StoreEntitySet="produto_em_condicao_item">
                 <ScalarProperty Name="prec_id" ColumnName="prec_id" />
                 <ScalarProperty Name="prod_id" ColumnName="prod_id" />
@@ -1341,8 +1299,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="produto_tamanho">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.produto_tamanho)">
+              <MappingFragment StoreEntitySet="produto_tamanho">
+                <ScalarProperty Name="prta_id" ColumnName="prta_id" />
+                <ScalarProperty Name="prta_descricao" ColumnName="prta_descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="saida">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.saida)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.saida)">
               <MappingFragment StoreEntitySet="saida">
                 <ScalarProperty Name="sai_id" ColumnName="sai_id" />
                 <ScalarProperty Name="sai_data_saida" ColumnName="sai_data_saida" />
@@ -1351,26 +1317,15 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="saida_tipo">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.saida_tipo)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.saida_tipo)">
               <MappingFragment StoreEntitySet="saida_tipo">
                 <ScalarProperty Name="sati_id" ColumnName="sati_id" />
                 <ScalarProperty Name="sati_descricao" ColumnName="sati_descricao" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.sysdiagrams)">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="venda">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.venda)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.venda)">
               <MappingFragment StoreEntitySet="venda">
                 <ScalarProperty Name="venda_id" ColumnName="venda_id" />
                 <ScalarProperty Name="venda_data_venda" ColumnName="venda_data_venda" />
@@ -1378,7 +1333,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="venda_item">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.venda_item)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.venda_item)">
               <MappingFragment StoreEntitySet="venda_item">
                 <ScalarProperty Name="venda_id" ColumnName="venda_id" />
                 <ScalarProperty Name="prod_id" ColumnName="prod_id" />
@@ -1391,7 +1346,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="vendedor">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.vendedor)">
+            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel1.vendedor)">
               <MappingFragment StoreEntitySet="vendedor">
                 <ScalarProperty Name="ven_id" ColumnName="ven_id" />
                 <ScalarProperty Name="ven_nome" ColumnName="ven_nome" />
@@ -1402,7 +1357,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="FK_produto_em_condicao_cliente" TypeName="ComercialModel.FK_produto_em_condicao_cliente" StoreEntitySet="produto_em_condicao">
+          <AssociationSetMapping Name="FK_produto_em_condicao_cliente" TypeName="ComercialModel1.FK_produto_em_condicao_cliente" StoreEntitySet="produto_em_condicao">
             <EndProperty Name="cliente">
               <ScalarProperty Name="cli_id" ColumnName="cli_id" />
             </EndProperty>
@@ -1410,7 +1365,7 @@
               <ScalarProperty Name="prec_id" ColumnName="prec_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_venda_cliente" TypeName="ComercialModel.FK_venda_cliente" StoreEntitySet="venda">
+          <AssociationSetMapping Name="FK_venda_cliente" TypeName="ComercialModel1.FK_venda_cliente" StoreEntitySet="venda">
             <EndProperty Name="cliente">
               <ScalarProperty Name="cli_id" ColumnName="cli_id" />
             </EndProperty>
@@ -1418,7 +1373,7 @@
               <ScalarProperty Name="venda_id" ColumnName="venda_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_compra_item_compra" TypeName="ComercialModel.FK_compra_item_compra" StoreEntitySet="compra_item">
+          <AssociationSetMapping Name="FK_compra_item_compra" TypeName="ComercialModel1.FK_compra_item_compra" StoreEntitySet="compra_item">
             <EndProperty Name="compra">
               <ScalarProperty Name="com_id" ColumnName="com_id" />
             </EndProperty>
@@ -1427,9 +1382,7 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_estoque_compra" TypeName="ComercialModel.FK_estoque_compra" StoreEntitySet="estoque">
-            </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_venda_item_compra" TypeName="ComercialModel.FK_venda_item_compra" StoreEntitySet="venda_item">
+          <AssociationSetMapping Name="FK_venda_item_compra" TypeName="ComercialModel1.FK_venda_item_compra" StoreEntitySet="venda_item">
             <EndProperty Name="compra">
               <ScalarProperty Name="com_id" ColumnName="com_id" />
             </EndProperty>
@@ -1439,7 +1392,7 @@
               <ScalarProperty Name="com_id" ColumnName="com_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_compra_item_produto" TypeName="ComercialModel.FK_compra_item_produto" StoreEntitySet="compra_item">
+          <AssociationSetMapping Name="FK_compra_item_produto" TypeName="ComercialModel1.FK_compra_item_produto" StoreEntitySet="compra_item">
             <EndProperty Name="produto">
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
@@ -1448,14 +1401,24 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_estoque_produto" TypeName="ComercialModel.FK_estoque_produto" StoreEntitySet="estoque">
-            <EndProperty Name="produto">
+          <AssociationSetMapping Name="FK_compra_item_produto_tamanho" TypeName="ComercialModel1.FK_compra_item_produto_tamanho" StoreEntitySet="compra_item">
+            <EndProperty Name="produto_tamanho">
+              <ScalarProperty Name="prta_id" ColumnName="coit_prod_tamanho" />
+            </EndProperty>
+            <EndProperty Name="compra_item">
+              <ScalarProperty Name="com_id" ColumnName="com_id" />
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_estoque_saida" TypeName="ComercialModel.FK_estoque_saida" StoreEntitySet="estoque">
-            </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_estorno_produto" TypeName="ComercialModel.FK_estorno_produto" StoreEntitySet="estorno">
+          <AssociationSetMapping Name="FK_estoque_produto" TypeName="ComercialModel1.FK_estoque_produto" StoreEntitySet="estoque">
+            <EndProperty Name="produto">
+              <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+            </EndProperty>
+            <EndProperty Name="estoque">
+              <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_estorno_produto" TypeName="ComercialModel1.FK_estorno_produto" StoreEntitySet="estorno">
             <EndProperty Name="produto">
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
@@ -1463,7 +1426,7 @@
               <ScalarProperty Name="esto_id" ColumnName="esto_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_estorno_venda" TypeName="ComercialModel.FK_estorno_venda" StoreEntitySet="estorno">
+          <AssociationSetMapping Name="FK_estorno_venda" TypeName="ComercialModel1.FK_estorno_venda" StoreEntitySet="estorno">
             <EndProperty Name="venda">
               <ScalarProperty Name="venda_id" ColumnName="venda_id" />
             </EndProperty>
@@ -1471,7 +1434,7 @@
               <ScalarProperty Name="esto_id" ColumnName="esto_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_venda_forma_pagamento" TypeName="ComercialModel.FK_venda_forma_pagamento" StoreEntitySet="venda">
+          <AssociationSetMapping Name="FK_venda_forma_pagamento" TypeName="ComercialModel1.FK_venda_forma_pagamento" StoreEntitySet="venda">
             <EndProperty Name="forma_pagamento">
               <ScalarProperty Name="fopa_id" ColumnName="fopa_id" />
             </EndProperty>
@@ -1479,7 +1442,7 @@
               <ScalarProperty Name="venda_id" ColumnName="venda_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_fornecedor" TypeName="ComercialModel.FK_produto_fornecedor" StoreEntitySet="produto">
+          <AssociationSetMapping Name="FK_produto_fornecedor" TypeName="ComercialModel1.FK_produto_fornecedor" StoreEntitySet="produto">
             <EndProperty Name="fornecedor">
               <ScalarProperty Name="for_id" ColumnName="for_id" />
             </EndProperty>
@@ -1487,7 +1450,7 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_pagamento_venda" TypeName="ComercialModel.FK_pagamento_venda" StoreEntitySet="pagamento">
+          <AssociationSetMapping Name="FK_pagamento_venda" TypeName="ComercialModel1.FK_pagamento_venda" StoreEntitySet="pagamento">
             <EndProperty Name="venda">
               <ScalarProperty Name="venda_id" ColumnName="venda_id" />
             </EndProperty>
@@ -1495,7 +1458,7 @@
               <ScalarProperty Name="pag_id" ColumnName="pag_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_com_vendedor_item_produto" TypeName="ComercialModel.FK_produto_com_vendedor_item_produto" StoreEntitySet="produto_com_vendedor_item">
+          <AssociationSetMapping Name="FK_produto_com_vendedor_item_produto" TypeName="ComercialModel1.FK_produto_com_vendedor_item_produto" StoreEntitySet="produto_com_vendedor_item">
             <EndProperty Name="produto">
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
@@ -1504,7 +1467,7 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_em_condicao_item_produto" TypeName="ComercialModel.FK_produto_em_condicao_item_produto" StoreEntitySet="produto_em_condicao_item">
+          <AssociationSetMapping Name="FK_produto_em_condicao_item_produto" TypeName="ComercialModel1.FK_produto_em_condicao_item_produto" StoreEntitySet="produto_em_condicao_item">
             <EndProperty Name="produto">
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
@@ -1513,7 +1476,7 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_produto_categoria" TypeName="ComercialModel.FK_produto_produto_categoria" StoreEntitySet="produto">
+          <AssociationSetMapping Name="FK_produto_produto_categoria" TypeName="ComercialModel1.FK_produto_produto_categoria" StoreEntitySet="produto">
             <EndProperty Name="produto_categoria">
               <ScalarProperty Name="prca_id" ColumnName="prca_id" />
             </EndProperty>
@@ -1521,7 +1484,7 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_saida_produto" TypeName="ComercialModel.FK_saida_produto" StoreEntitySet="saida">
+          <AssociationSetMapping Name="FK_saida_produto" TypeName="ComercialModel1.FK_saida_produto" StoreEntitySet="saida">
             <EndProperty Name="produto">
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
@@ -1529,7 +1492,7 @@
               <ScalarProperty Name="sai_id" ColumnName="sai_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_venda_item_produto1" TypeName="ComercialModel.FK_venda_item_produto1" StoreEntitySet="venda_item">
+          <AssociationSetMapping Name="FK_venda_item_produto1" TypeName="ComercialModel1.FK_venda_item_produto1" StoreEntitySet="venda_item">
             <EndProperty Name="produto">
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
@@ -1539,7 +1502,7 @@
               <ScalarProperty Name="com_id" ColumnName="com_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_com_vendedor_item_produto_com_vendedor" TypeName="ComercialModel.FK_produto_com_vendedor_item_produto_com_vendedor" StoreEntitySet="produto_com_vendedor_item">
+          <AssociationSetMapping Name="FK_produto_com_vendedor_item_produto_com_vendedor" TypeName="ComercialModel1.FK_produto_com_vendedor_item_produto_com_vendedor" StoreEntitySet="produto_com_vendedor_item">
             <EndProperty Name="produto_com_vendedor">
               <ScalarProperty Name="prcv_id" ColumnName="prcv_id" />
             </EndProperty>
@@ -1548,7 +1511,7 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_com_vendedor_vendedor" TypeName="ComercialModel.FK_produto_com_vendedor_vendedor" StoreEntitySet="produto_com_vendedor">
+          <AssociationSetMapping Name="FK_produto_com_vendedor_vendedor" TypeName="ComercialModel1.FK_produto_com_vendedor_vendedor" StoreEntitySet="produto_com_vendedor">
             <EndProperty Name="vendedor">
               <ScalarProperty Name="ven_id" ColumnName="ven_id" />
             </EndProperty>
@@ -1556,7 +1519,7 @@
               <ScalarProperty Name="prcv_id" ColumnName="prcv_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_em_condicao_item_produto_em_condicao" TypeName="ComercialModel.FK_produto_em_condicao_item_produto_em_condicao" StoreEntitySet="produto_em_condicao_item">
+          <AssociationSetMapping Name="FK_produto_em_condicao_item_produto_em_condicao" TypeName="ComercialModel1.FK_produto_em_condicao_item_produto_em_condicao" StoreEntitySet="produto_em_condicao_item">
             <EndProperty Name="produto_em_condicao">
               <ScalarProperty Name="prec_id" ColumnName="prec_id" />
             </EndProperty>
@@ -1565,7 +1528,7 @@
               <ScalarProperty Name="prod_id" ColumnName="prod_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_produto_em_condicao_vendedor" TypeName="ComercialModel.FK_produto_em_condicao_vendedor" StoreEntitySet="produto_em_condicao">
+          <AssociationSetMapping Name="FK_produto_em_condicao_vendedor" TypeName="ComercialModel1.FK_produto_em_condicao_vendedor" StoreEntitySet="produto_em_condicao">
             <EndProperty Name="vendedor">
               <ScalarProperty Name="ven_id" ColumnName="ven_id" />
             </EndProperty>
@@ -1573,7 +1536,7 @@
               <ScalarProperty Name="prec_id" ColumnName="prec_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_saida_saida_tipo" TypeName="ComercialModel.FK_saida_saida_tipo" StoreEntitySet="saida">
+          <AssociationSetMapping Name="FK_saida_saida_tipo" TypeName="ComercialModel1.FK_saida_saida_tipo" StoreEntitySet="saida">
             <EndProperty Name="saida_tipo">
               <ScalarProperty Name="sati_id" ColumnName="sati_id" />
             </EndProperty>
@@ -1581,7 +1544,7 @@
               <ScalarProperty Name="sai_id" ColumnName="sai_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_venda_item_venda" TypeName="ComercialModel.FK_venda_item_venda" StoreEntitySet="venda_item">
+          <AssociationSetMapping Name="FK_venda_item_venda" TypeName="ComercialModel1.FK_venda_item_venda" StoreEntitySet="venda_item">
             <EndProperty Name="venda">
               <ScalarProperty Name="venda_id" ColumnName="venda_id" />
             </EndProperty>
@@ -1591,7 +1554,7 @@
               <ScalarProperty Name="com_id" ColumnName="com_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FK_venda_vendedor" TypeName="ComercialModel.FK_venda_vendedor" StoreEntitySet="venda">
+          <AssociationSetMapping Name="FK_venda_vendedor" TypeName="ComercialModel1.FK_venda_vendedor" StoreEntitySet="venda">
             <EndProperty Name="vendedor">
               <ScalarProperty Name="ven_id" ColumnName="ven_id" />
             </EndProperty>
@@ -1599,22 +1562,7 @@
               <ScalarProperty Name="venda_id" ColumnName="venda_id" />
             </EndProperty>
           </AssociationSetMapping>
-          <EntitySetMapping Name="produto_tamanho">
-            <EntityTypeMapping TypeName="IsTypeOf(ComercialModel.produto_tamanho)">
-              <MappingFragment StoreEntitySet="produto_tamanho">
-                <ScalarProperty Name="prta_descricao" ColumnName="prta_descricao" />
-                <ScalarProperty Name="prta_id" ColumnName="prta_id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <AssociationSetMapping Name="FK_compra_item_produto_tamanho" TypeName="ComercialModel.FK_compra_item_produto_tamanho" StoreEntitySet="compra_item">
-            <EndProperty Name="compra_item">
-              <ScalarProperty Name="prod_id" ColumnName="prod_id" />
-              <ScalarProperty Name="com_id" ColumnName="com_id" /></EndProperty>
-            <EndProperty Name="produto_tamanho">
-              <ScalarProperty Name="prta_id" ColumnName="coit_prod_tamanho" /></EndProperty></AssociationSetMapping>
-          <AssociationSetMapping Name="FK_estoque_produto1" TypeName="ComercialModel.FK_estoque_produto1" StoreEntitySet="estoque">
-            <EndProperty Name="estoque">
-              <ScalarProperty Name="prod_id" ColumnName="prod_id" /></EndProperty>
-            <EndProperty Name="produto">
-              <ScalarProperty Name="prod_id" ColumnName="prod_id" /></EndProperty></AssociationSetMapping></EntityContainerMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
@@ -1632,231 +1580,191 @@
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram Name="ModelComercial" ZoomLevel="111">
-        <EntityTypeShape EntityType="ComercialModel.cliente" Width="1.5" PointX="0.75" PointY="18.125" Height="3.326396484374996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.compra" Width="1.5" PointX="9" PointY="5.25" Height="1.9802864583333335" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.compra_item" Width="1.5" PointX="8.25" PointY="14.875" Height="2.9417936197916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.estoque" Width="1.5" PointX="5.25" PointY="14.25" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.estorno" Width="1.5" PointX="5.25" PointY="11.25" Height="1.9802864583333353" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.forma_pagamento" Width="1.875" PointX="0.5" PointY="15.125" Height="2.1725878906250014" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.fornecedor" Width="1.5" PointX="0.75" PointY="8" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.pagamento" Width="1.5" PointX="5.25" PointY="20.25" Height="2.1725878906250031" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.produto" Width="1.5" PointX="3" PointY="10.75" Height="3.1340950520833353" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.produto_categoria" Width="1.625" PointX="0.75" PointY="11.5" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.produto_com_vendedor" Width="2" PointX="3" PointY="4.375" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.produto_com_vendedor_item" Width="1.75" PointX="5.25" PointY="8.25" Height="1.9802864583333353" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.produto_em_condicao" Width="1.75" PointX="6" PointY="17.25" Height="2.1725878906250031" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.produto_em_condicao_item" Width="1.625" PointX="8.25" PointY="11.25" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.saida" Width="1.5" PointX="8.25" PointY="8.25" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.saida_tipo" Width="1.5" PointX="6" PointY="5.5" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333331" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.venda" Width="1.5" PointX="3" PointY="17" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.venda_item" Width="1.5" PointX="11.25" PointY="10.875" Height="2.9417936197916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="ComercialModel.vendedor" Width="1.5" PointX="0.75" PointY="3.875" Height="2.7494921874999996" IsExpanded="true" />
-        <AssociationConnector Association="ComercialModel.FK_produto_em_condicao_cliente" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="19.903595377604166" />
-          <ConnectorPoint PointX="5.510416666666667" PointY="19.903595377604166" />
-          <ConnectorPoint PointX="5.677083333333333" PointY="19.903595377604166" />
-          <ConnectorPoint PointX="7.28125" PointY="19.903595377604166" />
-          <ConnectorPoint PointX="7.28125" PointY="19.422587890625003" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_venda_cliente" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="18.841095377604166" />
-          <ConnectorPoint PointX="3" PointY="18.841095377604166" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_compra_item_compra" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.21875" PointY="7.2302864583333335" />
-          <ConnectorPoint PointX="10.21875" PointY="16.442047526041669" />
-          <ConnectorPoint PointX="9.75" PointY="16.442047526041669" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_estoque_compra" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.0468725" PointY="7.2302864583333335" />
-          <ConnectorPoint PointX="10.0468725" PointY="14.53125" />
-          <ConnectorPoint PointX="9.2708328333333352" PointY="14.53125" />
-          <ConnectorPoint PointX="9.1041661666666673" PointY="14.53125" />
-          <ConnectorPoint PointX="8.7708310833333343" PointY="14.53125" />
-          <ConnectorPoint PointX="8.6041644166666664" PointY="14.53125" />
-          <ConnectorPoint PointX="7.958333333333333" PointY="14.53125" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="14.53125" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="14.53125" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="14.53125" />
-          <ConnectorPoint PointX="7.411458333333333" PointY="14.53125" />
-          <ConnectorPoint PointX="7.244791666666667" PointY="14.53125" />
-          <ConnectorPoint PointX="6.75" PointY="14.53125" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_venda_item_compra" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.3906275" PointY="7.2302864583333335" />
-          <ConnectorPoint PointX="10.3906275" PointY="13.650940755208334" />
-          <ConnectorPoint PointX="11.25" PointY="13.650940755208334" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_compra_item_produto" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="12.261172027994792" />
-          <ConnectorPoint PointX="5" PointY="12.261172027994792" />
-          <ConnectorPoint PointX="5" PointY="13.672587890625" />
-          <ConnectorPoint PointX="7.244791666666667" PointY="13.672587890625" />
-          <ConnectorPoint PointX="7.411458333333333" PointY="13.672587890625" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="13.672587890625" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="13.672587890625" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="13.672587890624998" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="13.672587890625" />
-          <ConnectorPoint PointX="8.6354164166666667" PointY="13.672587890625" />
-          <ConnectorPoint PointX="8.8020830833333346" PointY="13.672587890625" />
-          <ConnectorPoint PointX="9.1874995000000013" PointY="13.672587890625" />
-          <ConnectorPoint PointX="9.1874995000000013" PointY="14.875" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_estoque_produto" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="14.268697916666666" />
-          <ConnectorPoint PointX="3.75" PointY="15.634095552083334" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="15.634095552083334" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="15.634095552083334" />
-          <ConnectorPoint PointX="5.25" PointY="15.634095552083334" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_estoque_saida" ManuallyRouted="false">
-          <ConnectorPoint PointX="8.25" PointY="9.256965337239583" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="9.256965337239583" />
-          <ConnectorPoint PointX="7.916666666666667" PointY="9.256965337239583" />
-          <ConnectorPoint PointX="7.875" PointY="9.256965337239583" />
-          <ConnectorPoint PointX="7.875" PointY="15.5081709453125" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="15.5081709453125" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="15.5081709453125" />
-          <ConnectorPoint PointX="7.411458333333333" PointY="15.5081709453125" />
-          <ConnectorPoint PointX="7.244791666666667" PointY="15.5081709453125" />
-          <ConnectorPoint PointX="6.75" PointY="15.5081709453125" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_estorno_produto" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="11.686172563802085" />
-          <ConnectorPoint PointX="5.25" PointY="11.686172563802085" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_estorno_venda" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="17.583406705729168" />
-          <ConnectorPoint PointX="4.875" PointY="17.583406705729168" />
-          <ConnectorPoint PointX="4.875" PointY="12.25082490185547" />
-          <ConnectorPoint PointX="5.25" PointY="12.25082490185547" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_venda_forma_pagamento" ManuallyRouted="false">
-          <ConnectorPoint PointX="0.59375" PointY="17.297587890625003" />
-          <ConnectorPoint PointX="0.59375" PointY="17.889741486378206" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="17.889741486378206" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="17.889741486378206" />
-          <ConnectorPoint PointX="3" PointY="17.889741486378206" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_fornecedor" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="9.2593693033854159" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="9.2593693033854159" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="9.2593693033854159" />
-          <ConnectorPoint PointX="3.73437375" PointY="9.2593693033854159" />
-          <ConnectorPoint PointX="3.73437375" PointY="10.75" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_pagamento_venda" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="17.09375" />
-          <ConnectorPoint PointX="4.8333333333333339" PointY="17.09375" />
-          <ConnectorPoint PointX="5" PointY="17.09375" />
-          <ConnectorPoint PointX="5.59375" PointY="17.09375" />
-          <ConnectorPoint PointX="5.59375" PointY="20.25" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_com_vendedor_item_produto" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="13.482687174479167" />
-          <ConnectorPoint PointX="4.8333333333333339" PointY="13.482687174479167" />
-          <ConnectorPoint PointX="5.0833333333333339" PointY="13.482687174479167" />
-          <ConnectorPoint PointX="6.90625" PointY="13.482687174479167" />
-          <ConnectorPoint PointX="6.90625" PointY="10.230286458333335" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_em_condicao_item_produto" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="13.8744921875" />
-          <ConnectorPoint PointX="4.8333333333333339" PointY="13.8744921875" />
-          <ConnectorPoint PointX="5" PointY="13.8744921875" />
-          <ConnectorPoint PointX="7.244791666666667" PointY="13.8744921875" />
-          <ConnectorPoint PointX="7.411458333333333" PointY="13.8744921875" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="13.8744921875" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="13.8744921875" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="13.874492187499998" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="13.8744921875" />
-          <ConnectorPoint PointX="8.71874975" PointY="13.8744921875" />
-          <ConnectorPoint PointX="8.71874975" PointY="13.422587890625" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_produto_categoria" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.375" PointY="12.297841796875" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="12.297841796875" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="12.297841796875" />
-          <ConnectorPoint PointX="3" PointY="12.297841796875" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_saida_produto" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.148439375" PointY="10.75" />
-          <ConnectorPoint PointX="4.148439375" PointY="10.357687174479167" />
-          <ConnectorPoint PointX="6.822916666666667" PointY="10.357687174479167" />
-          <ConnectorPoint PointX="6.989583333333333" PointY="10.357687174479167" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="10.357687174479167" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="10.357687174479167" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="10.357687174479166" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="10.357687174479167" />
-          <ConnectorPoint PointX="8.25" PointY="10.357687174479167" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_venda_item_produto1" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="11.03125" />
-          <ConnectorPoint PointX="6.822916666666667" PointY="11.03125" />
-          <ConnectorPoint PointX="6.989583333333333" PointY="11.03125" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="11.03125" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="11.03125" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="11.031249999999998" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="11.03125" />
-          <ConnectorPoint PointX="9.9635391666666653" PointY="11.03125" />
-          <ConnectorPoint PointX="10.130205833333333" PointY="11.03125" />
-          <ConnectorPoint PointX="10.135416666666666" PointY="11.03125" />
-          <ConnectorPoint PointX="10.302083333333334" PointY="11.03125" />
-          <ConnectorPoint PointX="10.307294166666667" PointY="11.03125" />
-          <ConnectorPoint PointX="10.473960833333335" PointY="11.03125" />
-          <ConnectorPoint PointX="11.25" PointY="11.03125" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_com_vendedor_item_produto_com_vendedor" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.367186875" PointY="6.1629850260416674" />
-          <ConnectorPoint PointX="4.367186875" PointY="8.7546846516927079" />
-          <ConnectorPoint PointX="5.25" PointY="8.7546846516927079" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_com_vendedor_vendedor" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="5.2689925130208337" />
-          <ConnectorPoint PointX="3" PointY="5.2689925130208337" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_em_condicao_item_produto_em_condicao" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.328125" PointY="17.25" />
-          <ConnectorPoint PointX="7.328125" PointY="13.357687174479167" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="13.357687174479167" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="13.357687174479167" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="13.357687174479166" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="13.357687174479167" />
-          <ConnectorPoint PointX="8.25" PointY="13.357687174479167" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_produto_em_condicao_vendedor" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="4.09375" />
-          <ConnectorPoint PointX="7.65625" PointY="4.09375" />
-          <ConnectorPoint PointX="7.65625" PointY="17.25" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_saida_saida_tipo" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.3125" PointY="7.09568359375" />
-          <ConnectorPoint PointX="7.3125" PointY="10.326434674479167" />
-          <ConnectorPoint PointX="7.572916666666667" PointY="10.326434674479167" />
-          <ConnectorPoint PointX="7.739583333333333" PointY="10.326434674479167" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="10.326434674479165" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="10.326434674479167" />
-          <ConnectorPoint PointX="8.25" PointY="10.326434674479167" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_venda_item_venda" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="19.521139322916667" />
-          <ConnectorPoint PointX="5.510416666666667" PointY="19.521139322916667" />
-          <ConnectorPoint PointX="5.677083333333333" PointY="19.521139322916667" />
-          <ConnectorPoint PointX="7.197916666666667" PointY="19.521139322916667" />
-          <ConnectorPoint PointX="7.364583333333333" PointY="19.521139322916667" />
-          <ConnectorPoint PointX="12" PointY="19.521139322916667" />
-          <ConnectorPoint PointX="12" PointY="13.816793619791667" /></AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_venda_vendedor" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.5" PointY="6.6244921875" />
-          <ConnectorPoint PointX="1.5" PointY="7.75" />
-          <ConnectorPoint PointX="2.625" PointY="7.75" />
-          <ConnectorPoint PointX="2.625" PointY="18.278595377604166" />
-          <ConnectorPoint PointX="3" PointY="18.278595377604166" /></AssociationConnector>
-        <EntityTypeShape EntityType="ComercialModel.produto_tamanho" Width="1.5" PointX="3.375" PointY="0.875" Height="1.59568359375" />
-        <AssociationConnector Association="ComercialModel.FK_compra_item_produto_tamanho" >
-          <ConnectorPoint PointX="4.875" PointY="1.6728417968749998" />
-          <ConnectorPoint PointX="8" PointY="1.6728417968749998" />
+      <Diagram Name="ModelData">
+        <EntityTypeShape EntityType="ComercialModel1.cliente" Width="1.5" PointX="0.75" PointY="17.5" Height="3.326396484374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.compra" Width="1.5" PointX="9" PointY="18.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.compra_item" Width="1.5" PointX="11.25" PointY="10.625" Height="3.1340950520833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.estoque" Width="1.5" PointX="5.25" PointY="11.25" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.estorno" Width="1.5" PointX="5.25" PointY="8.25" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.forma_pagamento" Width="1.5" PointX="0.75" PointY="4.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.fornecedor" Width="1.5" PointX="0.75" PointY="7.875" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.pagamento" Width="1.5" PointX="5.25" PointY="1.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.produto" Width="1.5" PointX="3" PointY="10.5" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.produto_categoria" Width="1.5" PointX="0.75" PointY="11.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.produto_com_vendedor" Width="1.5" PointX="3" PointY="15.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.produto_com_vendedor_item" Width="1.5" PointX="5.25" PointY="14.25" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.produto_em_condicao" Width="1.5" PointX="6" PointY="5.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.produto_em_condicao_item" Width="1.5" PointX="8.25" PointY="8.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.produto_tamanho" Width="1.5" PointX="9" PointY="5.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.saida" Width="1.5" PointX="8.25" PointY="11.25" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.saida_tipo" Width="1.5" PointX="6" PointY="17.375" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.venda" Width="1.5" PointX="3" PointY="0.875" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.venda_item" Width="1.5" PointX="8.25" PointY="14.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComercialModel1.vendedor" Width="1.5" PointX="0.75" PointY="14" Height="2.7494921875000014" IsExpanded="true" />
+        <AssociationConnector Association="ComercialModel1.FK_produto_em_condicao_cliente" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="19.163198242187498" />
+          <ConnectorPoint PointX="2.625" PointY="19.163198242187498" />
+          <ConnectorPoint PointX="2.625" PointY="6.2112939453125" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="6.2112939453124989" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="6.2112939453125" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="6.2112939453124989" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="6.2112939453125" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="6.2112939453124989" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="6.2112939453125" />
+          <ConnectorPoint PointX="6" PointY="6.2112939453125" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_venda_cliente" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="18.300347121093751" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="18.300347121093751" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="18.300347121093751" />
+          <ConnectorPoint PointX="2.75" PointY="18.300347121093751" />
+          <ConnectorPoint PointX="2.75" PointY="2.1535953776041667" />
+          <ConnectorPoint PointX="3" PointY="2.1535953776041667" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_compra_item_compra" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.15625" PointY="18.5" />
+          <ConnectorPoint PointX="10.15625" PointY="10.90625" />
+          <ConnectorPoint PointX="11.25" PointY="10.90625" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_venda_item_compra" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.375" PointY="18.5" />
+          <ConnectorPoint PointX="9.375" PointY="17.691793619791667" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_compra_item_produto" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="13.525940755208334" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="8.5416671666666648" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="8.7083338333333327" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="13.525940755208335" />
+          <ConnectorPoint PointX="11.25" PointY="13.525940755208335" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_compra_item_produto_tamanho" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.328125" PointY="6.72068359375" />
+          <ConnectorPoint PointX="10.328125" PointY="10.7343725" />
+          <ConnectorPoint PointX="11.25" PointY="10.7343725" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_estoque_produto" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.240143229166666" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="12.240143229166666" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="12.240143229166666" />
+          <ConnectorPoint PointX="5.25" PointY="12.240143229166666" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_estorno_produto" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="10.5" />
+          <ConnectorPoint PointX="3.75" PointY="9.2401432291666676" />
+          <ConnectorPoint PointX="4.229166666666667" PointY="9.2401432291666676" />
+          <ConnectorPoint PointX="4.395833333333333" PointY="9.2401432291666676" />
+          <ConnectorPoint PointX="5.25" PointY="9.2401432291666676" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_estorno_venda" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.125" PointY="3.4321907552083335" />
+          <ConnectorPoint PointX="4.125" PointY="8.7138191145833339" />
+          <ConnectorPoint PointX="4.229166666666667" PointY="8.7138191145833339" />
+          <ConnectorPoint PointX="4.395833333333333" PointY="8.7138191145833339" />
+          <ConnectorPoint PointX="5.25" PointY="8.7138191145833339" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_venda_forma_pagamento" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.16814697265625" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="5.168146972656249" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="5.16814697265625" />
+          <ConnectorPoint PointX="3.5312475" PointY="5.16814697265625" />
+          <ConnectorPoint PointX="3.5312475" PointY="3.4321907552083335" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_fornecedor" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.8361669921875" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="9.8361669921874988" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="9.8361669921875" />
+          <ConnectorPoint PointX="3.3437475" PointY="9.8361669921875" />
+          <ConnectorPoint PointX="3.3437475" PointY="10.5" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_pagamento_venda" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.2112939453125" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="2.2112939453124993" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="2.2112939453125" />
+          <ConnectorPoint PointX="5.25" PointY="2.2112939453125" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_com_vendedor_item_produto" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="13.826396484375" />
+          <ConnectorPoint PointX="3.75" PointY="15" />
+          <ConnectorPoint PointX="4.75" PointY="15" />
+          <ConnectorPoint PointX="4.75" PointY="15.240143229166666" />
+          <ConnectorPoint PointX="5.25" PointY="15.240143229166666" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_em_condicao_item_produto" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.3125" PointY="10.5" />
+          <ConnectorPoint PointX="4.3125" PointY="8.15625" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="8.15625" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="8.15625" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="8.15625" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="8.15625" />
+          <ConnectorPoint PointX="8.25" PointY="8.15625" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_produto_categoria" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.172841796875" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="12.172841796874998" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="12.172841796875" />
+          <ConnectorPoint PointX="3" PointY="12.172841796875" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_saida_produto" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.707421119791668" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="13.707421119791668" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="13.707421119791668" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="13.707421119791666" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="13.707421119791668" />
+          <ConnectorPoint PointX="8.5416671666666648" PointY="13.707421119791668" />
+          <ConnectorPoint PointX="8.7083338333333327" PointY="13.707421119791668" />
+          <ConnectorPoint PointX="9" PointY="13.707421119791668" />
+          <ConnectorPoint PointX="9" PointY="13.230286458333335" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_venda_item_produto1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.338819614583333" />
+          <ConnectorPoint PointX="5" PointY="11.338819614583333" />
+          <ConnectorPoint PointX="5" PointY="13.355286458333335" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="13.355286458333335" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="13.355286458333335" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="13.355286458333334" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="13.355286458333335" />
+          <ConnectorPoint PointX="8.6250004999999987" PointY="13.355286458333335" />
+          <ConnectorPoint PointX="8.6250004999999987" PointY="14.75" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_com_vendedor_item_produto_com_vendedor" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.740143229166668" />
+          <ConnectorPoint PointX="5.25" PointY="15.740143229166668" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_com_vendedor_vendedor" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.999746093750002" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="15.99974609375" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="15.999746093750002" />
+          <ConnectorPoint PointX="3" PointY="15.999746093750002" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_em_condicao_item_produto_em_condicao" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.15625" PointY="7.297587890625" />
+          <ConnectorPoint PointX="7.15625" PointY="8.140625" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="8.140625" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="8.140625" />
+          <ConnectorPoint PointX="8.25" PointY="8.140625" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_produto_em_condicao_vendedor" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.09375" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="14.093749999999998" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="14.09375" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="14.09375" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="14.09375" />
+          <ConnectorPoint PointX="6.9531225" PointY="14.09375" />
+          <ConnectorPoint PointX="6.9531225" PointY="7.297587890625" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_saida_saida_tipo" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="18.172841796875" />
+          <ConnectorPoint PointX="7.875" PointY="18.172841796875" />
+          <ConnectorPoint PointX="7.875" PointY="12.240143229166668" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="12.240143229166668" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="12.240143229166668" />
+          <ConnectorPoint PointX="8.25" PointY="12.240143229166668" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_venda_item_venda" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="1.51189497265625" />
+          <ConnectorPoint PointX="5" PointY="1.51189497265625" />
+          <ConnectorPoint PointX="5" PointY="7.875" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="7.8749999999999991" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="7.875" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="7.8749999999999991" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="7.875" />
+          <ConnectorPoint PointX="8" PointY="7.875" />
           <ConnectorPoint PointX="8" PointY="14.375" />
-          <ConnectorPoint PointX="8.68749775" PointY="14.375" />
-          <ConnectorPoint PointX="8.68749775" PointY="14.875" />
-          </AssociationConnector>
-        <AssociationConnector Association="ComercialModel.FK_estoque_produto1" ManuallyRouted="true" >
-          <ConnectorPoint PointX="4.1562525" PointY="14.268697916666666" />
-          <ConnectorPoint PointX="4.1562525" PointY="14.954882906197916" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="14.954882906197916" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="14.954882906197916" />
-          <ConnectorPoint PointX="3.2904784585510027" PointY="14.954882906197916" />
-          <ConnectorPoint PointX="3.2904784585510027" PointY="16.348046369791668" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="16.348046369791668" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="16.348046369791668" />
-          <ConnectorPoint PointX="5.25" PointY="16.348046369791668" /></AssociationConnector></Diagram></edmx:Diagrams>
+          <ConnectorPoint PointX="8.5416671666666648" PointY="14.375" />
+          <ConnectorPoint PointX="8.7083338333333327" PointY="14.375" />
+          <ConnectorPoint PointX="9.21875225" PointY="14.375" />
+          <ConnectorPoint PointX="9.21875225" PointY="14.75" /></AssociationConnector>
+        <AssociationConnector Association="ComercialModel1.FK_venda_vendedor" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.046748046875" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="15.046748046874999" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="15.046748046875" />
+          <ConnectorPoint PointX="2.875" PointY="15.046748046875" />
+          <ConnectorPoint PointX="2.875" PointY="2.82414506640625" />
+          <ConnectorPoint PointX="3" PointY="2.82414506640625" /></AssociationConnector></Diagram></edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

@@ -12,8 +12,7 @@ namespace SisComWpf.view.shopping {
     public partial class ShoppingScreen : UserControl, IViewShopping {
 
         private ICtrlShopping controller;
-        private object dataObject;
-
+        
         public ShoppingScreen() {
             if (!System.ComponentModel.DesignerProperties.GetIsInDesignMode(this)) {
                 InitializeComponent();
@@ -32,18 +31,23 @@ namespace SisComWpf.view.shopping {
 
         #region IDefaultView Members
 
+        /// <summary>
+        /// Seta o controller na View e na Toolbar
+        /// Poderia ficar menos complexo?
+        /// </summary>
         public IDefaultCtrl BusinessObject {
             get { return controller; }
             set {
                 controller = (ICtrlShopping) value;
                 this.WindowTitle = value.ViewName;
                 this.dtgItems.ItemsSource = controller.GetShoppingItems();
+                this.toolbar.Controller = controller;
             }
         }
 
         public object DataObject {
-            get { return dataObject; }
-            set { dataObject = value; }
+            get { return dtBuy.DataContext; }
+            set { dtBuy.DataContext = value; }
         }
 
         public void Update(string sMessage, WarningMsgType msgType) {

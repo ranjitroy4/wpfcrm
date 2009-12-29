@@ -42,21 +42,31 @@ namespace SisComWpf.controller.shopping {
             this.bllShopping.UpdateValues();
         }
 
+        /// <summary>
+        /// Este método deve fornecer uma View para que o usuário
+        /// possa selecionar uma compra, e então a lista deve ser carregada baseada naqueles itens
+        /// </summary>
+        /// <param name="buy"></param>
         public void OpenShopping(compra buy) {
             this.bllShopping.SearchShopping(buy);
         }
 
         public void SaveShopping() {
             try {
-                this.bllShopping.SaveShopping();
+                this.bllShopping.SaveShopping(View.DataObject as compra);
                 View.Update("Compra salva com sucesso!", WarningMsgType.Warning);
             } catch (Exception ex) {
                 View.Update(ex.Message, WarningMsgType.Error);
             }
         }
 
+        /// <summary>
+        /// Limpa a lista e cria uma nova compra
+        /// </summary>
         public void NewShopping() {
             this.bllShopping.NewShopping();
+            ((IViewShopping)View).Update();
+            View.DataObject = new compra();
         }
 
         /// <summary>
