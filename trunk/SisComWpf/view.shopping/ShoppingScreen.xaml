@@ -1,7 +1,8 @@
 ﻿<UserControl x:Class="SisComWpf.view.shopping.ShoppingScreen"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Height="auto" Width="auto"
+    Height="auto" 
+    Width="auto"
     xmlns:local="clr-namespace:SisComWpf.view.shopping"
     xmlns:model="clr-namespace:SisComWpf.model.datamodel"
     xmlns:view="clr-namespace:SisComWpf.View"
@@ -17,6 +18,7 @@
 
     <UserControl.Resources>
         <info:SizeInfo x:Key="sizeList" />
+        <model:compra x:Key="dataObject" />
     </UserControl.Resources>
     
     <Grid>
@@ -32,6 +34,8 @@
                 <Button Width="100" Content="Buscar" x:Name="btnFind" Click="btnFind_Click" />
             </StackPanel>
 
+            <data:DatePicker x:Name="dtBuy" DataContext="{StaticResource dataObject}" DisplayDate="{Binding com_data_compra }" />
+            
             <data:DataGrid  x:Name="dtgItems"
 					        MinHeight="150"
                             AutoGenerateColumns="False"
@@ -43,23 +47,9 @@
                 <data:DataGrid.Columns>
                     <data:DataGridTextColumn IsReadOnly="True" Header="Código" Binding="{Binding produto.prod_codigo}" />
                     <data:DataGridTextColumn IsReadOnly="True" Header="Descrição" Binding="{Binding produto.prod_descricao}" />
-                        
-                    <data:DataGridTemplateColumn Header="Quantidade">
-                    <!-- Em modo de edição pode ser usado um templante diferente do visualização -->
-                        <data:DataGridTemplateColumn.CellEditingTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding coit_qtde }" />
-                            </DataTemplate>
-                        </data:DataGridTemplateColumn.CellEditingTemplate>
-                        <data:DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding coit_qtde }" />
-                            </DataTemplate>
-                        </data:DataGridTemplateColumn.CellTemplate>
-                    </data:DataGridTemplateColumn>
-
-                    <data:DataGridTemplateColumn Header="Valor Unitário">
-                        <!-- Em modo de edição pode ser usado um templante diferente do visualização -->
+                      
+                    <!--<data:DataGridTemplateColumn Header="Valor Unitário">
+                        Em modo de edição pode ser usado um templante diferente do visualização
                         <data:DataGridTemplateColumn.CellEditingTemplate>
                             <DataTemplate>
                                 <TextBox Text="{Binding coit_valor_unitario }" />
@@ -71,33 +61,32 @@
                                 <TextBlock Text="{Binding coit_valor_unitario }" />
                             </DataTemplate>
                         </data:DataGridTemplateColumn.CellTemplate>
-                    </data:DataGridTemplateColumn>
-
-                    <data:DataGridTextColumn Header="Valor Total"       Binding="{Binding coit_valor_total}"        IsReadOnly="True" />
-                    <data:DataGridTextColumn Header="Porcentagem"       Binding="{Binding coit_porc_ganho}"                           />
-                    <data:DataGridTextColumn Header="Valor Venda"       Binding="{Binding coit_valor_venda}"        IsReadOnly="True" />
-                    <data:DataGridTextColumn Header="Valor Total Venda" Binding="{Binding coit_valor_total_venda}"  IsReadOnly="True" />
-                    
-                    <data:DataGridComboBoxColumn Header="Tamanho" 
-                                                 
-                                                 ItemsSource="{StaticResource sizeList}" 
-                                                 SelectedItemBinding="{Binding produto_tamanho.prta_descricao}"
-                                                 
-                                                 SelectedValueBinding="{Binding prta_id}"
-                                                 DisplayMemberPath="prta_descricao" />
-                    
-                    <!--<data:DataGridTemplateColumn Header="Tamanho" >
-                        <data:DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
-                                    <TextBlock Text="Tamanho:" FontWeight="Bold"/>
-                                    <ComboBox IsEditable="True" 
-                                              ItemsSource="{StaticResource sizeList}" 
-                                              Text="{Binding produto_tamanho.prta_descricao}" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </data:DataGridTemplateColumn.CellTemplate>
                     </data:DataGridTemplateColumn>-->
+
+                    <data:DataGridTextColumn Header="Quantidade"           Binding="{Binding coit_qtde}"                              />
+                    <data:DataGridTextColumn Header="Valor Unitário"       Binding="{Binding coit_valor_unitario}"                    />
+                    <data:DataGridTextColumn Header="Valor Total"          Binding="{Binding coit_valor_total}"        IsReadOnly="True" />
+                    <data:DataGridTextColumn Header="Porcentagem"          Binding="{Binding coit_porc_ganho}"                           />
+                    <data:DataGridTextColumn Header="Valor Venda"          Binding="{Binding coit_valor_venda}"        IsReadOnly="True" />
+                    <data:DataGridTextColumn Header="Valor Total Venda"    Binding="{Binding coit_valor_total_venda}"  IsReadOnly="True" />
+
+                    <data:DataGridComboBoxColumn Header="Tamanho"                                   
+                                                 SelectedValueBinding="{Binding produto_tamanho}"
+                                                 SelectedItemBinding="{Binding produto_tamanho}"
+                                                 DisplayMemberPath="prta_descricao" 
+                                                 SelectedValuePath="prta_id">
+
+                        <data:DataGridComboBoxColumn.ElementStyle>
+                            <Style TargetType="ComboBox">
+                                <Setter Property="ItemsSource" Value="{StaticResource sizeList}" />
+                            </Style>
+                        </data:DataGridComboBoxColumn.ElementStyle>
+                        <data:DataGridComboBoxColumn.EditingElementStyle>
+                            <Style TargetType="ComboBox">
+                                <Setter Property="ItemsSource" Value="{StaticResource sizeList}" />
+                            </Style>
+                        </data:DataGridComboBoxColumn.EditingElementStyle>
+                    </data:DataGridComboBoxColumn>
                     
                 </data:DataGrid.Columns>
             </data:DataGrid>

@@ -141,6 +141,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="view.sell\SellScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view.shopping\ShoppingScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,6 +187,8 @@
     <Compile Include="controller.search\CtrlSelectSearch.cs" />
     <Compile Include="controller.search\ICtrlSearch.cs" />
     <Compile Include="controller.search\ICtrlSearchAction.cs" />
+    <Compile Include="controller.sell\CtrlSell.cs" />
+    <Compile Include="controller.sell\ICtrlSell.cs" />
     <Compile Include="controller.shopping\CtrlShopping.cs" />
     <Compile Include="controller.shopping\ICtrlShopping.cs" />
     <Compile Include="model.bll.category\BllRegCategory.cs" />
@@ -200,10 +206,10 @@
     <Compile Include="model.bll.supplier\BllRegSupplier.cs" />
     <Compile Include="model.bll.supplier\BllSeaSupplier.cs" />
     <Compile Include="model.datamodel\DataModel.cs" />
-    <Compile Include="model.datamodel\ModelComercial.Designer.cs">
+    <Compile Include="model.datamodel\ModelData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelComercial.edmx</DependentUpon>
+      <DependentUpon>ModelData.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -272,6 +278,11 @@
     <Compile Include="view.search\SearchWindow.xaml.cs">
       <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view.sell\IViewSell.cs" />
+    <Compile Include="view.sell\SellScreen.xaml.cs">
+      <DependentUpon>SellScreen.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="view.shopping\IViewShopping.cs" />
     <Compile Include="view.shopping\ShoppingScreen.xaml.cs">
       <DependentUpon>ShoppingScreen.xaml</DependentUpon>
@@ -283,11 +294,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="model.datamodel\ModelComercial.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelComercial.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="App.Config" />
+    <EntityDeploy Include="model.datamodel\ModelData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -308,7 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="view.components\" />
-    <Folder Include="view.sell\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

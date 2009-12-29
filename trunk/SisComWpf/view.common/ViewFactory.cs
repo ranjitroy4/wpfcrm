@@ -5,6 +5,7 @@ using SisComWpf.view.register;
 using System.Windows.Controls;
 using SisComWpf.View.Search;
 using SisComWpf.view.shopping;
+using SisComWpf.view.sell;
 
 namespace SisComWpf.View {
 
@@ -51,6 +52,8 @@ namespace SisComWpf.View {
                 uc = BuildRegisterScreen(iView);
             else if (type.Equals(typeof(ShoppingScreen)))
                 uc = new ShoppingScreen();
+            else if (type.Equals(typeof(SellScreen)))
+                uc = new SellScreen();
             else
                 uc = BuildSearchScreen(iView); // Search Screen
 

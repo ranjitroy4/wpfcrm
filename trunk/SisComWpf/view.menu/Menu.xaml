@@ -5,6 +5,7 @@
     xmlns:register ="clr-namespace:SisComWpf.View.Register"
     xmlns:search ="clr-namespace:SisComWpf.View.Search"
     xmlns:shopp ="clr-namespace:SisComWpf.view.shopping"
+    xmlns:sell ="clr-namespace:SisComWpf.view.sell"
     Height="Auto" Width="Auto">
 
     <Grid Height="Auto" Width="Auto" Background="#FFFFFFFF" x:Name="grd">
@@ -183,6 +184,21 @@
                                     </local:MenuButton>
                                 </StackPanel>
                                 <TextBlock Background="#FF41C5E1" Text="Formas de Pagamento" Margin="0" Foreground="White" FontWeight="Normal" TextAlignment="Center" />
+                            </StackPanel>
+                        </GroupBox.Content>
+                    </GroupBox>
+
+                    <GroupBox Background="White" HorizontalAlignment="Left" Margin="5">
+                        <GroupBox.Content>
+                            <StackPanel Margin="5">
+                                <StackPanel Orientation="Horizontal">
+                                    <local:MenuButton x:Name="btnSell" MenuLabelText="Novo" MenuButtonImage="../view.images/people.png" >
+                                        <local:MenuButton.UserControlToShow>
+                                            <sell:SellScreen />
+                                        </local:MenuButton.UserControlToShow>
+                                    </local:MenuButton>
+                                </StackPanel>
+                                <TextBlock Background="#FF41C5E1" Text="Efetuar venda" Margin="0" Foreground="White" FontWeight="Normal" TextAlignment="Center" />
                             </StackPanel>
                         </GroupBox.Content>
                     </GroupBox>

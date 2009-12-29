@@ -14,6 +14,8 @@ using SisComWpf.controller.search;
 using SisComWpf.view.shopping;
 using SisComWpf.controller.shopping;
 using SisComWpf.view.search;
+using SisComWpf.view.sell;
+using SisComWpf.controller.sell;
 
 namespace SisComWpf.Controller {
 
@@ -33,6 +35,8 @@ namespace SisComWpf.Controller {
                 iCtrl = BuildSearchControl((IViewSearch)userControl);
             else if (type.Equals(typeof(ShoppingScreen)))
                 iCtrl = new CtrlShopping();
+            else if (type.Equals(typeof(SellScreen)))
+                iCtrl = new CtrlSell();
             else
                 throw new NotImplementedException();
 

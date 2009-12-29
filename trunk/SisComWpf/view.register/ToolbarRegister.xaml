@@ -25,9 +25,7 @@
                     <TextBlock Text="Apagar" />
                 </Button.Content>
             </Button>
-
         </ToolBar>
-
     </DockPanel>
 
 </UserControl>
