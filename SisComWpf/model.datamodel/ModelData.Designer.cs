@@ -35,7 +35,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("ComercialModel1", "FK_venda_vendedor", "vendedor", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SisComWpf.model.datamodel.vendedor), "venda", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SisComWpf.model.datamodel.venda))]
 
 // Original file name:
-// Generation date: 29/12/2009 09:50:15
+// Generation date: 30/12/2009 12:28:57
 namespace SisComWpf.model.datamodel
 {
     

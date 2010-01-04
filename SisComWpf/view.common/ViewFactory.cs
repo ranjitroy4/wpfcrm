@@ -31,7 +31,8 @@ namespace SisComWpf.View {
                 iView.UcRegister = new ProductRegister();
             else if (type.Equals(typeof(forma_pagamento)))
                 iView.UcRegister = new PaymentFormRegister();
-
+            else if (type.Equals(typeof(vendedor)))
+                iView.UcRegister = new SellerRegister();
             else
                 throw new NotImplementedException();
 

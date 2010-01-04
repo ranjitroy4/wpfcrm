@@ -10,45 +10,58 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:register="clr-namespace:SisComWpf.view.register"
-	 xmlns:data="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
+	xmlns:data="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
     mc:Ignorable="d"
     d:DesignWidth="800" d:DesignHeight="600">
+
+    <UserControl.Resources>
+        <model:venda x:Key="dataObject" />
+    </UserControl.Resources>
 
     <Grid>
 
         <Rectangle RadiusY="0" RadiusX="0" Style="{StaticResource styleUcBackground}"  Margin="10,10,8,10" />
-        <!--<common:TitleBar x:Name="titleBar" VerticalAlignment="Top" Margin="10,10,10,0" />-->
-        
-        <Grid Margin="45,66,39,31.5">
-        	<GroupBox Margin="8,8,8,0" VerticalAlignment="Top" Height="61.5" Header="GroupBox">
-        		<StackPanel Orientation="Horizontal">
-        			<TextBlock Width="586" FontSize="22" Text="Vendedor" TextWrapping="Wrap" Height="38.54"/>
-        			<Button Content="Button" Width="76.123"/>
-        		</StackPanel>
-        	</GroupBox>
-        	<GroupBox Margin="8,73.5,8,0" VerticalAlignment="Top" Height="61.5" Header="GroupBox">
-        		<StackPanel Orientation="Horizontal">
-        			<TextBlock Width="586" FontSize="22" Text="Cliente" TextWrapping="Wrap" Height="38.54"/>
-        			<Button Width="76.123" Content="Button"/>
-        		</StackPanel>
-        	</GroupBox>
-        	<Rectangle Fill="{x:Null}" Stroke="#FF000000" Margin="8,151.5,8,106.5" RadiusY="7.833" RadiusX="7.833"/>
-        	<TextBox HorizontalAlignment="Left" Margin="23,164,0,0" VerticalAlignment="Top" Width="254" Height="29.54" Text="Código de Barras" TextWrapping="Wrap" FontSize="18"/>
-        	<Button Content="Button" Margin="297,164,342.877,0" VerticalAlignment="Top" Height="29.54"/>
-            
-			
-			 <data:DataGrid x:Name="dtgItems"
-					   MinHeight="150"
+        <common:TitleBar x:Name="titleBar" VerticalAlignment="Top" Margin="10,10,10,0" />
+
+        <Grid Margin="10,37.96,10,59.54" DataContext="{StaticResource dataObject}" x:Name="grdSell">
+
+            <GroupBox Margin="8,8,8,0" VerticalAlignment="Top" Height="61.5" Header="Vendedor">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="671" FontSize="22" Text="{Binding ven_nome}" TextWrapping="Wrap" Height="38.54" x:Name="lblSeller" />
+                    <Button Content="Selecionar" Width="76.123" x:Name="btnSelSeller" Click="btnSelSeller_Click" Style="{DynamicResource styleMnuButton}" />
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Margin="8,73.5,8,0" VerticalAlignment="Top" Height="61.5" Header="Cliente">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="671" FontSize="22" x:Name="lblCustomer" Text="{Binding Path=cli_nome}"  TextWrapping="Wrap" Height="38.54"/>
+                    <Button Width="76.123" Content="Selecionar" x:Name="btnSellCustomer" Click="btnSellCustomer_Click" Style="{DynamicResource styleMnuButton}" />
+                </StackPanel>
+            </GroupBox>
+
+            <Rectangle Fill="{x:Null}" Stroke="#FFFFFFFF" Margin="8,151.5,8,106.5" RadiusY="7.833" RadiusX="7.833"/>
+            <TextBox HorizontalAlignment="Left" Margin="23,164,0,0" VerticalAlignment="Top" Width="254" Height="29.54" Text="Código de Barras" TextWrapping="Wrap" FontSize="18" x:Name="txtInput" />
+            <Button Content="Selecionar" Margin="297,164,342.877,0" VerticalAlignment="Top" Height="29.54" x:Name="btnSelProduct" Style="{DynamicResource styleMnuButton}" />
+
+            <data:DataGrid x:Name="dtgItems"
+					        MinHeight="150"
+                            AutoGenerateColumns="False"
+                            CanUserAddRows="False"
+                            CanUserDeleteRows="True"
+                            CanUserSortColumns="False"
 					   Margin="23,197.54,25,162.46">
-					   
-					   
-					   </data:DataGrid>
-			 <TextBlock HorizontalAlignment="Right" Margin="0,0,25,120" VerticalAlignment="Bottom" Width="136.5" Height="24" TextWrapping="Wrap"><Run Language="pt-br" Text="Total Itens:"/></TextBlock>
-			 <Rectangle Fill="{x:Null}" Stroke="#FF000000" Margin="8,0,8,8" RadiusY="7.833" RadiusX="7.833" Height="81.5" VerticalAlignment="Bottom"/>
-			 <ComboBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="254" Height="25.5" IsSynchronizedWithCurrentItem="True" Margin="23,0,0,51"/>
-			 <TextBlock HorizontalAlignment="Left" Margin="23,0,0,19" VerticalAlignment="Bottom" Width="254" Height="28" Text="Total do Pedido" TextWrapping="Wrap"/>
-			
+
+
+            </data:DataGrid>
+
+            <TextBlock HorizontalAlignment="Right" Margin="0,0,25,120" VerticalAlignment="Bottom" Width="136.5" Height="24" TextWrapping="Wrap"><Run Language="pt-br" Text="Total Itens:"/></TextBlock>
+            <Rectangle Fill="{x:Null}" Stroke="#FFFFFFFF" Margin="8,0,8,8" RadiusY="7.833" RadiusX="7.833" Height="81.5" VerticalAlignment="Bottom"/>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="254" Height="25.5" IsSynchronizedWithCurrentItem="True" Margin="23,0,0,51" Style="{DynamicResource styleCboFind}" Template="{DynamicResource styleCbo}"/>
+            <TextBlock HorizontalAlignment="Left" Margin="23,0,0,19" VerticalAlignment="Bottom" Width="254" Height="28" Text="Total do Pedido" TextWrapping="Wrap"/>
+
         </Grid>
-        
+
+        <common1:WarningMessage x:Name="warningMessage" Margin="10,0,10,10" Height="Auto" VerticalAlignment="Bottom" />
+
     </Grid>
 </UserControl>
