@@ -12,7 +12,6 @@
         <StackPanel x:Name="stkFields" DataContext="{StaticResource dataObject}" >
             <TextBlock Text="Descrição" Margin="10,0,10,0" />
             <TextBox Width="Auto" Margin="10,0,10,0" Text="{Binding fopa_descricao}"  />
-            <RadioButton IsChecked="{Binding fopa_flag_acrescimo}" />
         </StackPanel>
     </Grid>
 </UserControl>

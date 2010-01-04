@@ -201,6 +201,7 @@
     <Compile Include="model.bll.product\BllSeaProduct.cs" />
     <Compile Include="model.bll.seller\BllRegSeller.cs" />
     <Compile Include="model.bll.seller\BllSeaSeller.cs" />
+    <Compile Include="model.bll.sell\BllSell.cs" />
     <Compile Include="model.bll.shopping\BllShopping.cs" />
     <Compile Include="model.bll.size\BllSeaSize.cs" />
     <Compile Include="model.bll.supplier\BllRegSupplier.cs" />
@@ -226,6 +227,7 @@
     </Compile>
     <Compile Include="view.common\CommonView.cs" />
     <Compile Include="view.common\IDefaultView.cs" />
+    <Compile Include="view.common\PropConverter.cs" />
     <Compile Include="view.common\TitleBar.xaml.cs">
       <DependentUpon>TitleBar.xaml</DependentUpon>
     </Compile>
