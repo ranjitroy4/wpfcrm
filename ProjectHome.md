@@ -1,0 +1,1 @@
+This project is built on WPF technology and C# on .NET plataform.
